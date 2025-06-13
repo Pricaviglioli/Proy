@@ -1,1 +1,1 @@
-# Proy
+# Proyecto Kiosco
