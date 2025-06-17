@@ -15,6 +15,7 @@ CREATE TABLE DetallesVenta(
 ID INT PRIMARY KEY IDENTITY(1,1),
 IDVenta INT FOREIGN KEY REFERENCES Ventas(idVta),
 IDProd INT FOREIGN KEY REFERENCES Productos(idProd),
+cantidad INT,
 subtotal INT
 );
 
@@ -23,35 +24,9 @@ select * from DetallesVenta
 select * from Ventas
 
 INSERT INTO Productos
-VALUES('Cerveza Quilmes', 2800)
+VALUES('Cerveza Iguana', 1800)
 
+DROP PROCEDURE sp_InsertarDetalleVenta;
+DROP PROCEDURE sp_RegistrarVta;
 
-CREATE PROCEDURE sp_InsertarDetalleVenta
-    @IDVenta INT,
-    @IDProd INT,
-    @Cantidad INT
-AS
-BEGIN
-    DECLARE @PrecioUnitario INT;
-    DECLARE @Subtotal INT;
-
-    -- Obtener el precio unitario del producto
-    SELECT @PrecioUnitario = PrecioUnitario FROM Productos WHERE idProd = @IDProd;
-
-    -- Calcular subtotal
-    SET @Subtotal = @Cantidad * @PrecioUnitario;
-
-    -- Insertar el detalle con subtotal calculado
-    INSERT INTO DetallesVenta (IDVenta, IDProd, subtotal)
-    VALUES (@IDVenta, @IDProd, @Subtotal);
-END
-
-CREATE PROCEDURE sp_RegistrarVta
-    @fechaVta DATE,
-    @totalVta INT,
-    @TipoPago NVARCHAR(13)
-AS
-BEGIN
-    INSERT INTO Ventas (fechaVta, totalVta, TipoPago)
-    VALUES (@fechaVta, @totalVta, @TipoPago);
-END
+DELETE FROM Ventas WHERE totalVta = 11200
