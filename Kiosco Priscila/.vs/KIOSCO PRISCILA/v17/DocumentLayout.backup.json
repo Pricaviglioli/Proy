@@ -1,0 +1,161 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\EZEQUIELEITOR\\source\\repos\\KIOSCO PRISCILA\\Kiosco Priscila\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{57924F70-E2F3-4911-8F02-A877F8A02815}|Kiosco_2025\\Kiosco_2025.csproj|c:\\users\\ezequieleitor\\source\\repos\\kiosco priscila\\kiosco priscila\\kiosco_2025\\sections\\admin\\frmdeleteproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57924F70-E2F3-4911-8F02-A877F8A02815}|Kiosco_2025\\Kiosco_2025.csproj|solutionrelative:kiosco_2025\\sections\\admin\\frmdeleteproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57924F70-E2F3-4911-8F02-A877F8A02815}|Kiosco_2025\\Kiosco_2025.csproj|c:\\users\\ezequieleitor\\source\\repos\\kiosco priscila\\kiosco priscila\\kiosco_2025\\utilities\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57924F70-E2F3-4911-8F02-A877F8A02815}|Kiosco_2025\\Kiosco_2025.csproj|solutionrelative:kiosco_2025\\utilities\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57924F70-E2F3-4911-8F02-A877F8A02815}|Kiosco_2025\\Kiosco_2025.csproj|c:\\users\\ezequieleitor\\source\\repos\\kiosco priscila\\kiosco priscila\\kiosco_2025\\sections\\admin\\frmmodproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57924F70-E2F3-4911-8F02-A877F8A02815}|Kiosco_2025\\Kiosco_2025.csproj|solutionrelative:kiosco_2025\\sections\\admin\\frmmodproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57924F70-E2F3-4911-8F02-A877F8A02815}|Kiosco_2025\\Kiosco_2025.csproj|c:\\users\\ezequieleitor\\source\\repos\\kiosco priscila\\kiosco priscila\\kiosco_2025\\sections\\admin\\frmdeleteproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{57924F70-E2F3-4911-8F02-A877F8A02815}|Kiosco_2025\\Kiosco_2025.csproj|solutionrelative:kiosco_2025\\sections\\admin\\frmdeleteproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57924F70-E2F3-4911-8F02-A877F8A02815}|Kiosco_2025\\Kiosco_2025.csproj|c:\\users\\ezequieleitor\\source\\repos\\kiosco priscila\\kiosco priscila\\kiosco_2025\\sections\\admin\\frmaddproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57924F70-E2F3-4911-8F02-A877F8A02815}|Kiosco_2025\\Kiosco_2025.csproj|solutionrelative:kiosco_2025\\sections\\admin\\frmaddproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57924F70-E2F3-4911-8F02-A877F8A02815}|Kiosco_2025\\Kiosco_2025.csproj|c:\\users\\ezequieleitor\\source\\repos\\kiosco priscila\\kiosco priscila\\kiosco_2025\\sections\\admin\\frmmodproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{57924F70-E2F3-4911-8F02-A877F8A02815}|Kiosco_2025\\Kiosco_2025.csproj|solutionrelative:kiosco_2025\\sections\\admin\\frmmodproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57924F70-E2F3-4911-8F02-A877F8A02815}|Kiosco_2025\\Kiosco_2025.csproj|c:\\users\\ezequieleitor\\source\\repos\\kiosco priscila\\kiosco priscila\\kiosco_2025\\sections\\admin\\frmaddproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{57924F70-E2F3-4911-8F02-A877F8A02815}|Kiosco_2025\\Kiosco_2025.csproj|solutionrelative:kiosco_2025\\sections\\admin\\frmaddproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57924F70-E2F3-4911-8F02-A877F8A02815}|Kiosco_2025\\Kiosco_2025.csproj|c:\\users\\ezequieleitor\\source\\repos\\kiosco priscila\\kiosco priscila\\kiosco_2025\\utilities\\procedures.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57924F70-E2F3-4911-8F02-A877F8A02815}|Kiosco_2025\\Kiosco_2025.csproj|solutionrelative:kiosco_2025\\utilities\\procedures.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmDeleteProducts.cs",
+              "DocumentMoniker": "C:\\Users\\EZEQUIELEITOR\\source\\repos\\KIOSCO PRISCILA\\Kiosco Priscila\\Kiosco_2025\\Sections\\Admin\\frmDeleteProducts.cs",
+              "RelativeDocumentMoniker": "Kiosco_2025\\Sections\\Admin\\frmDeleteProducts.cs",
+              "ToolTip": "C:\\Users\\EZEQUIELEITOR\\source\\repos\\KIOSCO PRISCILA\\Kiosco Priscila\\Kiosco_2025\\Sections\\Admin\\frmDeleteProducts.cs",
+              "RelativeToolTip": "Kiosco_2025\\Sections\\Admin\\frmDeleteProducts.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAACsAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T01:30:38.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmDeleteProducts.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\EZEQUIELEITOR\\source\\repos\\KIOSCO PRISCILA\\Kiosco Priscila\\Kiosco_2025\\Sections\\Admin\\frmDeleteProducts.cs",
+              "RelativeDocumentMoniker": "Kiosco_2025\\Sections\\Admin\\frmDeleteProducts.cs",
+              "ToolTip": "C:\\Users\\EZEQUIELEITOR\\source\\repos\\KIOSCO PRISCILA\\Kiosco Priscila\\Kiosco_2025\\Sections\\Admin\\frmDeleteProducts.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Kiosco_2025\\Sections\\Admin\\frmDeleteProducts.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T01:30:36.839Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmModProducts.cs",
+              "DocumentMoniker": "C:\\Users\\EZEQUIELEITOR\\source\\repos\\KIOSCO PRISCILA\\Kiosco Priscila\\Kiosco_2025\\Sections\\Admin\\frmModProducts.cs",
+              "RelativeDocumentMoniker": "Kiosco_2025\\Sections\\Admin\\frmModProducts.cs",
+              "ToolTip": "C:\\Users\\EZEQUIELEITOR\\source\\repos\\KIOSCO PRISCILA\\Kiosco Priscila\\Kiosco_2025\\Sections\\Admin\\frmModProducts.cs",
+              "RelativeToolTip": "Kiosco_2025\\Sections\\Admin\\frmModProducts.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAACwAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T01:26:54.616Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmModProducts.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\EZEQUIELEITOR\\source\\repos\\KIOSCO PRISCILA\\Kiosco Priscila\\Kiosco_2025\\Sections\\Admin\\frmModProducts.cs",
+              "RelativeDocumentMoniker": "Kiosco_2025\\Sections\\Admin\\frmModProducts.cs",
+              "ToolTip": "C:\\Users\\EZEQUIELEITOR\\source\\repos\\KIOSCO PRISCILA\\Kiosco Priscila\\Kiosco_2025\\Sections\\Admin\\frmModProducts.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Kiosco_2025\\Sections\\Admin\\frmModProducts.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T01:26:52.692Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\EZEQUIELEITOR\\source\\repos\\KIOSCO PRISCILA\\Kiosco Priscila\\Kiosco_2025\\Utilities\\Program.cs",
+              "RelativeDocumentMoniker": "Kiosco_2025\\Utilities\\Program.cs",
+              "ToolTip": "C:\\Users\\EZEQUIELEITOR\\source\\repos\\KIOSCO PRISCILA\\Kiosco Priscila\\Kiosco_2025\\Utilities\\Program.cs",
+              "RelativeToolTip": "Kiosco_2025\\Utilities\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T00:48:51.629Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmAddProducts.cs",
+              "DocumentMoniker": "C:\\Users\\EZEQUIELEITOR\\source\\repos\\KIOSCO PRISCILA\\Kiosco Priscila\\Kiosco_2025\\Sections\\Admin\\frmAddProducts.cs",
+              "RelativeDocumentMoniker": "Kiosco_2025\\Sections\\Admin\\frmAddProducts.cs",
+              "ToolTip": "C:\\Users\\EZEQUIELEITOR\\source\\repos\\KIOSCO PRISCILA\\Kiosco Priscila\\Kiosco_2025\\Sections\\Admin\\frmAddProducts.cs",
+              "RelativeToolTip": "Kiosco_2025\\Sections\\Admin\\frmAddProducts.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAgwCoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T00:40:19.376Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "frmAddProducts.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\EZEQUIELEITOR\\source\\repos\\KIOSCO PRISCILA\\Kiosco Priscila\\Kiosco_2025\\Sections\\Admin\\frmAddProducts.cs",
+              "RelativeDocumentMoniker": "Kiosco_2025\\Sections\\Admin\\frmAddProducts.cs",
+              "ToolTip": "C:\\Users\\EZEQUIELEITOR\\source\\repos\\KIOSCO PRISCILA\\Kiosco Priscila\\Kiosco_2025\\Sections\\Admin\\frmAddProducts.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Kiosco_2025\\Sections\\Admin\\frmAddProducts.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T00:40:12.792Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Procedures.cs",
+              "DocumentMoniker": "C:\\Users\\EZEQUIELEITOR\\source\\repos\\KIOSCO PRISCILA\\Kiosco Priscila\\Kiosco_2025\\Utilities\\Procedures.cs",
+              "RelativeDocumentMoniker": "Kiosco_2025\\Utilities\\Procedures.cs",
+              "ToolTip": "C:\\Users\\EZEQUIELEITOR\\source\\repos\\KIOSCO PRISCILA\\Kiosco Priscila\\Kiosco_2025\\Utilities\\Procedures.cs",
+              "RelativeToolTip": "Kiosco_2025\\Utilities\\Procedures.cs",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAnwI4AAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T00:35:29.563Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
