@@ -1,7 +1,8 @@
 CREATE TABLE Usuarios(
 id_usuario INT PRIMARY KEY,
 username NVARCHAR(60),
-password NVARCHAR(60)
+password NVARCHAR(60),
+rol NVARCHAR(15)
 );
 
 CREATE TABLE Productos(
@@ -60,3 +61,35 @@ CREATE PROCEDURE spu_eliminar_prod
 @id_prod INT
 AS
 DELETE FROM Productos WHERE id_prod = @id_prod
+
+INSERT INTO Usuarios
+VALUES(1, 'Eze', '1234', 'Administrador')
+
+
+CREATE PROCEDURE spu_mostrar_usuarios
+AS
+SELECT * FROM Usuarios
+
+
+CREATE PROCEDURE spu_agregar_user
+@id_usuario INT,
+@username NVARCHAR(60),
+@password NVARCHAR(60),
+@rol NVARCHAR(15)
+AS
+INSERT INTO Usuarios
+VALUES(@id_usuario, @username, @password, @rol);
+
+CREATE PROCEDURE spu_modificar_user
+@id_usuario INT,
+@username NVARCHAR(60),
+@password NVARCHAR(60),
+@rol NVARCHAR(15)
+AS
+UPDATE Usuarios SET username = @username, password = @password, rol = @rol WHERE id_usuario = @id_usuario;
+
+CREATE PROCEDURE spu_eliminar_user
+@id_usuario INT
+AS
+DELETE FROM Usuarios WHERE id_usuario = @id_usuario
+

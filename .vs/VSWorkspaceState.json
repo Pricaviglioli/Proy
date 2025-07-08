@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Kiosco Priscila",
+    "\\Kiosco Priscila\\Kiosco_2025",
+    "\\Kiosco Priscila\\Kiosco_2025\\Sections"
   ],
+  "SelectedNode": "\\Kiosco Priscila\\Kiosco_2025\\Sections\\frmLogin.cs",
   "PreviewInSolutionExplorer": false
 }

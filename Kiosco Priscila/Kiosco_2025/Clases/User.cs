@@ -11,5 +11,6 @@ namespace Kiosco_2025.Clases
         public int id_usuario;
         public string username;
         public string password;
+        public string rol;
     }
 }

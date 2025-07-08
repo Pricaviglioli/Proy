@@ -34,9 +34,12 @@
             this.sToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificarProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ventasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agregarUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificarUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuAdmin.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,7 +69,10 @@
             this.sToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.agregarProductosToolStripMenuItem,
             this.eliminarProductosToolStripMenuItem,
-            this.modificarProductosToolStripMenuItem});
+            this.modificarProductosToolStripMenuItem,
+            this.agregarUsuariosToolStripMenuItem,
+            this.eliminarUsuariosToolStripMenuItem,
+            this.modificarUsuariosToolStripMenuItem});
             this.sToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sToolStripMenuItem.Name = "sToolStripMenuItem";
             this.sToolStripMenuItem.Size = new System.Drawing.Size(103, 34);
@@ -83,9 +89,18 @@
             // eliminarProductosToolStripMenuItem
             // 
             this.eliminarProductosToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.eliminarProductosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("eliminarProductosToolStripMenuItem.Image")));
             this.eliminarProductosToolStripMenuItem.Name = "eliminarProductosToolStripMenuItem";
             this.eliminarProductosToolStripMenuItem.Size = new System.Drawing.Size(265, 26);
             this.eliminarProductosToolStripMenuItem.Text = "Eliminar Productos";
+            // 
+            // modificarProductosToolStripMenuItem
+            // 
+            this.modificarProductosToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modificarProductosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("modificarProductosToolStripMenuItem.Image")));
+            this.modificarProductosToolStripMenuItem.Name = "modificarProductosToolStripMenuItem";
+            this.modificarProductosToolStripMenuItem.Size = new System.Drawing.Size(265, 26);
+            this.modificarProductosToolStripMenuItem.Text = "Modificar Productos";
             // 
             // ventasToolStripMenuItem
             // 
@@ -101,13 +116,29 @@
             this.ventasToolStripMenuItem1.Size = new System.Drawing.Size(107, 34);
             this.ventasToolStripMenuItem1.Text = "Ventas";
             // 
-            // modificarProductosToolStripMenuItem
+            // agregarUsuariosToolStripMenuItem
             // 
-            this.modificarProductosToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modificarProductosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("modificarProductosToolStripMenuItem.Image")));
-            this.modificarProductosToolStripMenuItem.Name = "modificarProductosToolStripMenuItem";
-            this.modificarProductosToolStripMenuItem.Size = new System.Drawing.Size(265, 26);
-            this.modificarProductosToolStripMenuItem.Text = "Modificar Productos";
+            this.agregarUsuariosToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.agregarUsuariosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("agregarUsuariosToolStripMenuItem.Image")));
+            this.agregarUsuariosToolStripMenuItem.Name = "agregarUsuariosToolStripMenuItem";
+            this.agregarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(265, 26);
+            this.agregarUsuariosToolStripMenuItem.Text = "Agregar usuarios";
+            // 
+            // eliminarUsuariosToolStripMenuItem
+            // 
+            this.eliminarUsuariosToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.eliminarUsuariosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("eliminarUsuariosToolStripMenuItem.Image")));
+            this.eliminarUsuariosToolStripMenuItem.Name = "eliminarUsuariosToolStripMenuItem";
+            this.eliminarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(265, 26);
+            this.eliminarUsuariosToolStripMenuItem.Text = "Eliminar usuarios";
+            // 
+            // modificarUsuariosToolStripMenuItem
+            // 
+            this.modificarUsuariosToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modificarUsuariosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("modificarUsuariosToolStripMenuItem.Image")));
+            this.modificarUsuariosToolStripMenuItem.Name = "modificarUsuariosToolStripMenuItem";
+            this.modificarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(265, 26);
+            this.modificarUsuariosToolStripMenuItem.Text = "Modificar usuarios";
             // 
             // frmMain
             // 
@@ -144,5 +175,8 @@
         private System.Windows.Forms.ToolStripMenuItem eliminarProductosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem modificarProductosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem agregarUsuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eliminarUsuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modificarUsuariosToolStripMenuItem;
     }
 }

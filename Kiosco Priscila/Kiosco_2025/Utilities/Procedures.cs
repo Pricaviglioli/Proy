@@ -145,13 +145,13 @@ namespace Kiosco_2025.Utilities
             }
         }
 
+
         public void LimpiarCampos(List<TextBox> textBoxes)
         {
             foreach (TextBox textBox in textBoxes)
             {
                 textBox.Clear();
             }
-
         }
     }
 }

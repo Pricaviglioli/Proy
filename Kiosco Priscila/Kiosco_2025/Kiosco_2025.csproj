@@ -70,11 +70,23 @@
     <Compile Include="Clases\Productos.cs" />
     <Compile Include="Clases\User.cs" />
     <Compile Include="Clases\Venta.cs" />
+    <Compile Include="Sections\Admin\frmAddUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sections\Admin\frmAddUsers.Designer.cs">
+      <DependentUpon>frmAddUsers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sections\Admin\frmDeleteProducts.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Sections\Admin\frmDeleteProducts.Designer.cs">
       <DependentUpon>frmDeleteProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sections\Admin\frmDelUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sections\Admin\frmDelUsers.Designer.cs">
+      <DependentUpon>frmDelUsers.cs</DependentUpon>
     </Compile>
     <Compile Include="Sections\Admin\frmModProducts.cs">
       <SubType>Form</SubType>
@@ -94,6 +106,12 @@
     <Compile Include="Sections\Admin\frmAddProducts.Designer.cs">
       <DependentUpon>frmAddProducts.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sections\Admin\frmModUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sections\Admin\frmModUsers.Designer.cs">
+      <DependentUpon>frmModUsers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sections\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,8 +128,14 @@
     <Compile Include="Sections\User\frmMainU.Designer.cs">
       <DependentUpon>frmMainU.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Sections\Admin\frmAddUsers.resx">
+      <DependentUpon>frmAddUsers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sections\Admin\frmDeleteProducts.resx">
       <DependentUpon>frmDeleteProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sections\Admin\frmDelUsers.resx">
+      <DependentUpon>frmDelUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sections\Admin\frmModProducts.resx">
       <DependentUpon>frmModProducts.cs</DependentUpon>
@@ -121,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sections\Admin\frmAddProducts.resx">
       <DependentUpon>frmAddProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sections\Admin\frmModUsers.resx">
+      <DependentUpon>frmModUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sections\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
