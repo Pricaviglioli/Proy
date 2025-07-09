@@ -1,4 +1,6 @@
 ﻿using Kiosco_2025.Clases;
+using Kiosco_2025.Sections.Admin;
+using Kiosco_2025.Sections.User;
 using Kiosco_2025.Utilities;
 using Microsoft.ReportingServices.ReportProcessing.ReportObjectModel;
 using System;
@@ -31,9 +33,24 @@ namespace Kiosco_2025
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < usersTable.Columns.Count; i++)
+            var userInps = (userInp.Text, passwrdInp.Text);
+            var users = new List<(string, string, string)>();
+            Procedures procedures = new Procedures();
+            string response = procedures.Logincomparision(usersTable, userInps, users);
+            if (response == "Administrador")
             {
-                System.Diagnostics.Debug.WriteLine(usersTable.Rows[0].Cells[i].Value);
+                frmMain main = new frmMain();
+                main.ShowDialog();
+            }
+            else if (response == "Usuario")
+            {
+                frmMainU main = new frmMainU();
+                main.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Usuario o contraseña incorrectos. Por favor, intente nuevamente.", "Error de autenticación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                procedures.LimpiarCampos(new List<TextBox> { userInp, passwrdInp });
             }
         }
     }

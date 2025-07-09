@@ -129,6 +129,31 @@ namespace Kiosco_2025.Utilities
         }
 
 
+         
+        public string Logincomparision(DataGridView usersTable, (string, string) userInputs, List<(string, string, string)> users)
+        {
+            for (int i = 0; i < usersTable.ColumnCount; i++)
+            {
+                users.Add((usersTable.Rows[i].Cells[1].Value.ToString(), usersTable.Rows[i].Cells[2].Value.ToString(), usersTable.Rows[i].Cells[3].Value.ToString()));
+            }
+            for (int i = 0; i < users.Count; i++)
+            {
+                if (userInputs.Item1 == users[i].Item1 && userInputs.Item2 == users[i].Item2)
+                {
+                    if (users[i].Item3 == "Administrador")
+                    {
+                        return "Administrador";
+                    }
+                    else if (users[i].Item3 == "Usuario")
+                    {
+                        return "Usuario";
+                    }
+                }
+            }
+            return null;
+        }
+
+
         public Productos ParseDataProd(Productos producto, string id, string nombre, string precio)
         {
             if (!int.TryParse(id, out int idProd) || !decimal.TryParse(precio, out decimal precioUnitario))
