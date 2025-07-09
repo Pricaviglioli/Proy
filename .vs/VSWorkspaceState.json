@@ -3,8 +3,10 @@
     "",
     "\\Kiosco Priscila",
     "\\Kiosco Priscila\\Kiosco_2025",
-    "\\Kiosco Priscila\\Kiosco_2025\\Sections"
+    "\\Kiosco Priscila\\Kiosco_2025\\Sections",
+    "\\Kiosco Priscila\\Kiosco_2025\\Sections\\User",
+    "\\Kiosco Priscila\\Kiosco_2025\\Utilities"
   ],
-  "SelectedNode": "\\Kiosco Priscila\\Kiosco_2025\\Sections\\frmLogin.cs",
+  "SelectedNode": "\\Kiosco Priscila\\Kiosco_2025\\Sections\\User\\frmMainU.cs",
   "PreviewInSolutionExplorer": false
 }

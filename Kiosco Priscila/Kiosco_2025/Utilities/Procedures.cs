@@ -1,4 +1,5 @@
 ﻿using Kiosco_2025.Clases;
+using Kiosco_2025.Sections.Admin;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -129,7 +130,18 @@ namespace Kiosco_2025.Utilities
         }
 
 
-         
+        public void openMDIContainers(Form formSelected, Form formPadre)
+        {
+            formSelected.MdiParent = formPadre;
+            formSelected.TopLevel = false;
+            formSelected.FormBorderStyle = FormBorderStyle.None;
+            formSelected.Dock = DockStyle.Fill;
+            formSelected.WindowState = FormWindowState.Normal;
+            formSelected.Show();
+        }
+
+
+
         public string Logincomparision(DataGridView usersTable, (string, string) userInputs, List<(string, string, string)> users)
         {
             for (int i = 0; i < usersTable.ColumnCount; i++)
@@ -152,6 +164,7 @@ namespace Kiosco_2025.Utilities
             }
             return null;
         }
+
 
 
         public Productos ParseDataProd(Productos producto, string id, string nombre, string precio)

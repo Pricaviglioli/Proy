@@ -1,4 +1,5 @@
-﻿using Kiosco_2025.Utilities;
+﻿using Kiosco_2025.Clases;
+using Kiosco_2025.Utilities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,6 +29,16 @@ namespace Kiosco_2025.Sections.User
         {
             Procedures procedure = new Procedures();
             procedure.BuscarDatos("spu_buscarprod_nombre", productsTable, "@nombre_prod", searchProdInp.Text, new List<string> { "ID", "Producto", "Precio Unitario" });
+        }
+
+        private void productsTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            List<object> selectedProduct = new List<object>();
+            Productos productos = new Productos();
+            for (int i = 0; i < productsTable.Columns.Count; i++)
+            {
+                System.Diagnostics.Debug.WriteLine(productsTable.Rows[e.RowIndex].Cells[i].Value);
+            }
         }
     }
 }

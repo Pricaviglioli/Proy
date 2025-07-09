@@ -64,7 +64,7 @@
             this.divVtas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 122F));
             this.divVtas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 67F));
             this.divVtas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 83F));
-            this.divVtas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 162F));
+            this.divVtas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 165F));
             this.divVtas.Controls.Add(this.cartImg, 4, 0);
             this.divVtas.Controls.Add(this.prodImg, 0, 0);
             this.divVtas.Controls.Add(this.priceTxt, 6, 3);
@@ -97,7 +97,7 @@
             // 
             this.cartImg.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cartImg.Image = ((System.Drawing.Image)(resources.GetObject("cartImg.Image")));
-            this.cartImg.Location = new System.Drawing.Point(536, 3);
+            this.cartImg.Location = new System.Drawing.Point(533, 3);
             this.cartImg.Margin = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.cartImg.Name = "cartImg";
             this.cartImg.Size = new System.Drawing.Size(76, 71);
@@ -109,7 +109,7 @@
             // 
             this.prodImg.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.prodImg.Image = ((System.Drawing.Image)(resources.GetObject("prodImg.Image")));
-            this.prodImg.Location = new System.Drawing.Point(87, 0);
+            this.prodImg.Location = new System.Drawing.Point(86, 0);
             this.prodImg.Margin = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.prodImg.Name = "prodImg";
             this.prodImg.Size = new System.Drawing.Size(76, 77);
@@ -122,9 +122,9 @@
             this.priceTxt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.priceTxt.AutoSize = true;
             this.priceTxt.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceTxt.Location = new System.Drawing.Point(718, 512);
+            this.priceTxt.Location = new System.Drawing.Point(710, 505);
             this.priceTxt.Name = "priceTxt";
-            this.priceTxt.Size = new System.Drawing.Size(21, 22);
+            this.priceTxt.Size = new System.Drawing.Size(31, 36);
             this.priceTxt.TabIndex = 16;
             this.priceTxt.Text = "$";
             this.priceTxt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -134,7 +134,7 @@
             this.deleteItemCartBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.deleteItemCartBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteItemCartBtn.ForeColor = System.Drawing.Color.DarkRed;
-            this.deleteItemCartBtn.Location = new System.Drawing.Point(225, 505);
+            this.deleteItemCartBtn.Location = new System.Drawing.Point(223, 505);
             this.deleteItemCartBtn.Name = "deleteItemCartBtn";
             this.deleteItemCartBtn.Size = new System.Drawing.Size(136, 35);
             this.deleteItemCartBtn.TabIndex = 12;
@@ -147,10 +147,10 @@
             this.carritoTxt.AutoSize = true;
             this.divVtas.SetColumnSpan(this.carritoTxt, 3);
             this.carritoTxt.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.carritoTxt.Location = new System.Drawing.Point(671, 9);
+            this.carritoTxt.Location = new System.Drawing.Point(622, 0);
             this.carritoTxt.Margin = new System.Windows.Forms.Padding(0, 0, 30, 0);
             this.carritoTxt.Name = "carritoTxt";
-            this.carritoTxt.Size = new System.Drawing.Size(180, 58);
+            this.carritoTxt.Size = new System.Drawing.Size(276, 77);
             this.carritoTxt.TabIndex = 10;
             this.carritoTxt.Text = "Carrito";
             this.carritoTxt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -159,9 +159,9 @@
             // 
             this.searchProdInp.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.divVtas.SetColumnSpan(this.searchProdInp, 2);
-            this.searchProdInp.Location = new System.Drawing.Point(235, 114);
+            this.searchProdInp.Location = new System.Drawing.Point(232, 111);
             this.searchProdInp.Name = "searchProdInp";
-            this.searchProdInp.Size = new System.Drawing.Size(170, 21);
+            this.searchProdInp.Size = new System.Drawing.Size(170, 28);
             this.searchProdInp.TabIndex = 2;
             // 
             // buscarProdTxt
@@ -169,9 +169,9 @@
             this.buscarProdTxt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buscarProdTxt.AutoSize = true;
             this.buscarProdTxt.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buscarProdTxt.Location = new System.Drawing.Point(3, 110);
+            this.buscarProdTxt.Location = new System.Drawing.Point(12, 82);
             this.buscarProdTxt.Name = "buscarProdTxt";
-            this.buscarProdTxt.Size = new System.Drawing.Size(215, 30);
+            this.buscarProdTxt.Size = new System.Drawing.Size(194, 86);
             this.buscarProdTxt.TabIndex = 5;
             this.buscarProdTxt.Text = "Buscar producto:";
             // 
@@ -181,10 +181,10 @@
             this.prodTxt.AutoSize = true;
             this.divVtas.SetColumnSpan(this.prodTxt, 3);
             this.prodTxt.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.prodTxt.Location = new System.Drawing.Point(226, 9);
+            this.prodTxt.Location = new System.Drawing.Point(231, 0);
             this.prodTxt.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
             this.prodTxt.Name = "prodTxt";
-            this.prodTxt.Size = new System.Drawing.Size(256, 58);
+            this.prodTxt.Size = new System.Drawing.Size(242, 77);
             this.prodTxt.TabIndex = 0;
             this.prodTxt.Text = "Productos";
             this.prodTxt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -195,10 +195,11 @@
             this.divVtas.SetColumnSpan(this.cartTable, 4);
             this.cartTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cartTable.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.cartTable.Location = new System.Drawing.Point(501, 80);
+            this.cartTable.Location = new System.Drawing.Point(498, 80);
             this.cartTable.Name = "cartTable";
+            this.cartTable.RowHeadersWidth = 62;
             this.divVtas.SetRowSpan(this.cartTable, 2);
-            this.cartTable.Size = new System.Drawing.Size(429, 409);
+            this.cartTable.Size = new System.Drawing.Size(432, 409);
             this.cartTable.TabIndex = 4;
             // 
             // addCartBtn
@@ -206,7 +207,7 @@
             this.addCartBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.addCartBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addCartBtn.ForeColor = System.Drawing.Color.SeaGreen;
-            this.addCartBtn.Location = new System.Drawing.Point(26, 505);
+            this.addCartBtn.Location = new System.Drawing.Point(25, 505);
             this.addCartBtn.Name = "addCartBtn";
             this.addCartBtn.Size = new System.Drawing.Size(169, 35);
             this.addCartBtn.TabIndex = 7;
@@ -220,9 +221,9 @@
             this.tipoPagoSelect.Items.AddRange(new object[] {
             "Efectivo",
             "Transferencia"});
-            this.tipoPagoSelect.Location = new System.Drawing.Point(501, 512);
+            this.tipoPagoSelect.Location = new System.Drawing.Point(498, 509);
             this.tipoPagoSelect.Name = "tipoPagoSelect";
-            this.tipoPagoSelect.Size = new System.Drawing.Size(116, 24);
+            this.tipoPagoSelect.Size = new System.Drawing.Size(116, 29);
             this.tipoPagoSelect.TabIndex = 14;
             // 
             // button2
@@ -230,7 +231,7 @@
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.button2.Location = new System.Drawing.Point(785, 504);
+            this.button2.Location = new System.Drawing.Point(783, 504);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(133, 37);
             this.button2.TabIndex = 13;
@@ -241,7 +242,7 @@
             // 
             this.searchImg.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.searchImg.Image = ((System.Drawing.Image)(resources.GetObject("searchImg.Image")));
-            this.searchImg.Location = new System.Drawing.Point(435, 102);
+            this.searchImg.Location = new System.Drawing.Point(432, 102);
             this.searchImg.Name = "searchImg";
             this.searchImg.Size = new System.Drawing.Size(47, 45);
             this.searchImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -255,9 +256,9 @@
             this.tipoPagoTxt.AutoSize = true;
             this.divVtas.SetColumnSpan(this.tipoPagoTxt, 2);
             this.tipoPagoTxt.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tipoPagoTxt.Location = new System.Drawing.Point(371, 512);
+            this.tipoPagoTxt.Location = new System.Drawing.Point(372, 492);
             this.tipoPagoTxt.Name = "tipoPagoTxt";
-            this.tipoPagoTxt.Size = new System.Drawing.Size(121, 22);
+            this.tipoPagoTxt.Size = new System.Drawing.Size(113, 62);
             this.tipoPagoTxt.TabIndex = 11;
             this.tipoPagoTxt.Text = "Abona con:";
             this.tipoPagoTxt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -267,9 +268,9 @@
             this.totalTxt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.totalTxt.AutoSize = true;
             this.totalTxt.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalTxt.Location = new System.Drawing.Point(624, 512);
+            this.totalTxt.Location = new System.Drawing.Point(622, 492);
             this.totalTxt.Name = "totalTxt";
-            this.totalTxt.Size = new System.Drawing.Size(58, 22);
+            this.totalTxt.Size = new System.Drawing.Size(57, 62);
             this.totalTxt.TabIndex = 15;
             this.totalTxt.Text = "Total:";
             this.totalTxt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -289,12 +290,14 @@
             this.productsTable.Location = new System.Drawing.Point(3, 176);
             this.productsTable.Name = "productsTable";
             this.productsTable.ReadOnly = true;
-            this.productsTable.Size = new System.Drawing.Size(492, 313);
+            this.productsTable.RowHeadersWidth = 62;
+            this.productsTable.Size = new System.Drawing.Size(489, 313);
             this.productsTable.TabIndex = 3;
+            this.productsTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productsTable_CellContentClick);
             // 
             // frmMainU
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(933, 554);
