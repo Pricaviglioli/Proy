@@ -12,14 +12,14 @@ precio_unitario DECIMAL(18,2)
 );
 
 CREATE TABLE Venta(
-id_vta INT PRIMARY KEY,
+id_vta INT PRIMARY KEY IDENTITY(1,1),
 tipo_pago NVARCHAR(13),
 total DECIMAL(18,2)
 );
 
 
 CREATE TABLE DetalleVta(
-id_detalleVta INT PRIMARY KEY,
+id_detalleVta INT PRIMARY KEY IDENTITY(1,1),
 id_vta INT FOREIGN KEY REFERENCES Venta(id_vta),
 id_prod INT FOREIGN KEY REFERENCES Productos(id_prod),
 cantidad DECIMAL(18,2),
@@ -93,3 +93,33 @@ CREATE PROCEDURE spu_eliminar_user
 AS
 DELETE FROM Usuarios WHERE id_usuario = @id_usuario
 
+
+CREATE PROCEDURE spu_registrar_detallevta
+@id_vta INT,
+@id_prod INT,
+@cantidad DECIMAL(18,2),
+@fecha DATETIME,
+@subtotal DECIMAL(18,2)
+AS
+INSERT INTO DetalleVta
+VALUES(@id_vta, @id_prod, @cantidad, @fecha, @subtotal)
+
+CREATE PROCEDURE spu_registrar_vta
+@tipo_pago NVARCHAR(13),
+@total DECIMAL(18,2)
+AS
+INSERT INTO Venta
+VALUES(@tipo_pago, @total)
+
+DROP TABLE DetalleVta
+DROP TABLE Venta
+DROP PROCEDURE spu_registrar_detallevta
+DROP PROCEDURE spu_registrar_vta
+
+SELECT MAX(id_vta) FROM Venta
+
+CREATE PROCEDURE spu_mostrar_vtas
+AS
+SELECT * FROM Venta
+
+SELECT * FROM DetalleVta

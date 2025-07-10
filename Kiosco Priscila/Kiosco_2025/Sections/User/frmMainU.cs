@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -30,6 +31,7 @@ namespace Kiosco_2025.Sections.User
             cartTable.Columns.Add("Producto", "Producto");
             cartTable.Columns.Add("Precio Unitario", "Precio Unitario");
             cartTable.Columns.Add("Cantidad", "Cantidad");
+            cartTable.Columns.Add("Subtotal", "Subtotal");
         }
 
         private void searchImg_Click(object sender, EventArgs e)
@@ -46,7 +48,7 @@ namespace Kiosco_2025.Sections.User
                 return;
             }
             Procedures procedures = new Procedures();
-            if (!decimal.TryParse(cantInp.Text, out decimal cantidad) || cantidad <= 0)
+            if (!decimal.TryParse(cantInp.Text, out decimal subtotal) || subtotal <= 0)
             {
                 MessageBox.Show("Por favor, ingrese una cantidad válida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -59,7 +61,7 @@ namespace Kiosco_2025.Sections.User
                     descripcion = productsTable.CurrentRow.Cells[1].Value.ToString(),
                     precio_unitario = Convert.ToDecimal(productsTable.CurrentRow.Cells[2].Value)
                 };
-                totalAcumulated = procedures.Cart(cartTable, productos, null, 'A', cantidad, totalAcumulated, totalTxt);
+                totalAcumulated = procedures.Cart(cartTable, productos, null, 'A', int.Parse(cantInp.Text), subtotal , totalAcumulated, totalTxt);
             }
             procedures.LimpiarCampos(new List<TextBox> { cantInp });
         }
@@ -79,8 +81,55 @@ namespace Kiosco_2025.Sections.User
                 precio_unitario = Convert.ToDecimal(cartTable.CurrentRow.Cells[2].Value)
             };
             Procedures procedure = new Procedures();
-            totalAcumulated = procedure.Cart(cartTable, productos, productSelected, 'D', 0, totalAcumulated, totalTxt);
+            totalAcumulated = procedure.Cart(cartTable, productos, productSelected, 'D', 0, 0, totalAcumulated, totalTxt);
             procedure.LimpiarCampos(new List<TextBox> { cantInp });
+        }
+
+        private void realizarVtaBtn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Está seguro de que desea realizar la venta?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (DialogResult.Yes == MessageBox.Show("Está seguro de que desea realizar la venta?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+            {
+                if (tipoPagoSelect == null || tipoPagoSelect.SelectedItem == null)
+                {
+                    MessageBox.Show("Por favor, seleccione un tipo de pago.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else
+                {
+                    Procedures procedures = new Procedures();
+                    List<string> sqlParametersVTA = new List<string> { "@tipo_pago", "@total" };
+                    List<object> parametrosVTA = new List<object> { tipoPagoSelect.SelectedItem.ToString(), totalAcumulated };
+                    procedures.AgregarDatos("spu_registrar_vta", sqlParametersVTA, parametrosVTA);
+
+
+                    SqlCommand cmd = new SqlCommand("SELECT MAX(id_vta) FROM venta", new Conexion().Connect());
+                    var result = cmd.ExecuteScalar();
+                    int lastID = result != DBNull.Value ? Convert.ToInt32(result) : 0;
+
+                    for (int i = 0; i < (cartTable.Rows.Count - 1); i++)
+                    {
+                        DataGridViewRow Product = cartTable.Rows[i];
+                        List<string> sqlParametersVTAItem = new List<string> { "@id_vta", "@id_prod", "@cantidad", "@fecha", "@subtotal" };
+                        List<object> parametrosVTAItem = new List<object>
+                        {
+                            lastID,
+                            Product.Cells[0].Value,
+                            Convert.ToDecimal(Product.Cells[3].Value),
+                            DateTime.Now,
+                            Convert.ToDecimal(Product.Cells[2].Value)
+                        };
+                        procedures.AgregarDatos("spu_registrar_detallevta", sqlParametersVTAItem, parametrosVTAItem);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Venta cancelada.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            cartTable.Rows.Clear();
+            cartTable.Columns.Clear();
+            tipoPagoSelect.SelectedIndex = -1;
         }
     }
 }

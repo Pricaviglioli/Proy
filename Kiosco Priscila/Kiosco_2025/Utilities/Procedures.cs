@@ -130,7 +130,7 @@ namespace Kiosco_2025.Utilities
         }
 
 
-        public decimal Cart(DataGridView CartTable, Productos productos, DataGridViewRow productSelected, char state, decimal cantidad, decimal precioTotal, Label totalTxt)
+        public decimal Cart(DataGridView CartTable, Productos productos, DataGridViewRow productSelected, char state, int cantidad, decimal subtotal ,decimal precioTotal, Label totalTxt)
         {
             bool exists = false;
             for (int i = 0; i < CartTable.Rows.Count; i++)
@@ -147,8 +147,8 @@ namespace Kiosco_2025.Utilities
             }
             if (state == 'A' && !exists)
             {
-                decimal subtotal = productos.precio_unitario * cantidad;
-                CartTable.Rows.Add(productos.id_prod, productos.descripcion, productos.precio_unitario, subtotal);
+                subtotal = productos.precio_unitario * cantidad;
+                CartTable.Rows.Add(productos.id_prod, productos.descripcion, productos.precio_unitario, cantidad, subtotal);
                 precioTotal += subtotal;
                 totalTxt.Text = "Total: $" + precioTotal.ToString();
             }
@@ -158,10 +158,10 @@ namespace Kiosco_2025.Utilities
             }
             else
             {
-                if (CartTable.CurrentRow.Cells[2].Value != null && CartTable.CurrentRow.Cells[3].Value != null)
+                if (CartTable.CurrentRow.Cells[2].Value != null && CartTable.CurrentRow.Cells[4].Value != null)
                 {
-                    decimal cantidadEliminar = Convert.ToDecimal(CartTable.CurrentRow.Cells[3].Value);
-                    decimal subtotal = cantidadEliminar;
+                    decimal cantidadEliminar = Convert.ToDecimal(CartTable.CurrentRow.Cells[4].Value);
+                    subtotal = cantidadEliminar;
                     precioTotal -= subtotal;
                     CartTable.Rows.Remove(productSelected);
                     if (precioTotal < 0)
