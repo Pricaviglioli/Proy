@@ -130,6 +130,16 @@ namespace Kiosco_2025.Utilities
         }
 
 
+        public void Cart(DataGridView CartTable, Productos productos, List<string> Atributos)
+        {
+            for (int i = 0; i < Atributos.Count; i++)
+            {
+                CartTable.Columns.Add(Atributos[i], Atributos[i]);
+            }
+            CartTable.Rows.Add(productos.id_prod, productos.descripcion, productos.precio_unitario);
+        }
+
+
         public void openMDIContainers(Form formSelected, Form formPadre)
         {
             formSelected.MdiParent = formPadre;
@@ -139,7 +149,6 @@ namespace Kiosco_2025.Utilities
             formSelected.WindowState = FormWindowState.Normal;
             formSelected.Show();
         }
-
 
 
         public string Logincomparision(DataGridView usersTable, (string, string) userInputs, List<(string, string, string)> users)

@@ -39,11 +39,13 @@ namespace Kiosco_2025
             string response = procedures.Logincomparision(usersTable, userInps, users);
             if (response == "Administrador")
             {
+                procedures.LimpiarCampos(new List<TextBox> { userInp, passwrdInp });
                 frmMain main = new frmMain();
                 main.ShowDialog();
             }
             else if (response == "Usuario")
             {
+                procedures.LimpiarCampos(new List<TextBox> { userInp, passwrdInp });
                 frmMainU main = new frmMainU();
                 main.ShowDialog();
             }
