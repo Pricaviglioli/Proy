@@ -130,13 +130,50 @@ namespace Kiosco_2025.Utilities
         }
 
 
-        public void Cart(DataGridView CartTable, Productos productos, List<string> Atributos)
+        public decimal Cart(DataGridView CartTable, Productos productos, DataGridViewRow productSelected, char state, decimal cantidad, decimal precioTotal, Label totalTxt)
         {
-            for (int i = 0; i < Atributos.Count; i++)
+            bool exists = false;
+            for (int i = 0; i < CartTable.Rows.Count; i++)
             {
-                CartTable.Columns.Add(Atributos[i], Atributos[i]);
+                if (CartTable.Rows[i].Cells[0].Value != null && productos.id_prod == int.Parse(CartTable.Rows[i].Cells[0].Value.ToString()))
+                {
+                    exists = true;
+                    break;
+                }
+                else if (CartTable.Rows[i].Cells[i].Value == null)
+                {
+                    break;
+                }
             }
-            CartTable.Rows.Add(productos.id_prod, productos.descripcion, productos.precio_unitario);
+            if (state == 'A' && !exists)
+            {
+                decimal subtotal = productos.precio_unitario * cantidad;
+                CartTable.Rows.Add(productos.id_prod, productos.descripcion, productos.precio_unitario, subtotal);
+                precioTotal += subtotal;
+                totalTxt.Text = "Total: $" + precioTotal.ToString();
+            }
+            else if (state == 'A' && exists)
+            {
+                MessageBox.Show("El producto ya se encuentra en el carrito.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                if (CartTable.CurrentRow.Cells[2].Value != null && CartTable.CurrentRow.Cells[3].Value != null)
+                {
+                    decimal cantidadEliminar = Convert.ToDecimal(CartTable.CurrentRow.Cells[3].Value);
+                    decimal subtotal = cantidadEliminar;
+                    precioTotal -= subtotal;
+                    CartTable.Rows.Remove(productSelected);
+                    if (precioTotal < 0)
+                        precioTotal = 0;
+                    totalTxt.Text = "Total: $" + precioTotal.ToString();
+                }
+                else
+                {
+                    totalTxt.Text = "Total:";
+                }
+            }
+            return precioTotal;
         }
 
 

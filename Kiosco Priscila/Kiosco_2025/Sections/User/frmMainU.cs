@@ -24,6 +24,12 @@ namespace Kiosco_2025.Sections.User
         {
             Procedures procedure = new Procedures();
             procedure.MostrarDatos("spu_mostrar_prods", productsTable, new List<string> { "ID", "Producto", "Precio Unitario"});
+
+
+            cartTable.Columns.Add("ID", "ID");
+            cartTable.Columns.Add("Producto", "Producto");
+            cartTable.Columns.Add("Precio Unitario", "Precio Unitario");
+            cartTable.Columns.Add("Cantidad", "Cantidad");
         }
 
         private void searchImg_Click(object sender, EventArgs e)
@@ -34,25 +40,47 @@ namespace Kiosco_2025.Sections.User
 
         private void addCartBtn_Click(object sender, EventArgs e)
         {
-            List<string> Atributos = new List<string> { "ID", "Producto", "Precio unitario" };
-            Productos productos = new Productos
+            if (productsTable.CurrentRow == null)
             {
-                id_prod = Convert.ToInt32(productsTable.CurrentRow.Cells[0].Value),
-                descripcion = productsTable.CurrentRow.Cells[1].Value.ToString(),
-                precio_unitario = Convert.ToDecimal(productsTable.CurrentRow.Cells[2].Value)
-            };
-            Procedures procedure = new Procedures();
-            procedure.Cart(cartTable, productos, Atributos);
-            totalAcumulated += productos.precio_unitario;
-            totalTxt.Text = "Total: $" + totalAcumulated.ToString();
+                MessageBox.Show("Por favor, seleccione un producto para agregar al carrito.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            Procedures procedures = new Procedures();
+            if (!decimal.TryParse(cantInp.Text, out decimal cantidad) || cantidad <= 0)
+            {
+                MessageBox.Show("Por favor, ingrese una cantidad válida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                Productos productos = new Productos
+                {
+                    id_prod = Convert.ToInt32(productsTable.CurrentRow.Cells[0].Value),
+                    descripcion = productsTable.CurrentRow.Cells[1].Value.ToString(),
+                    precio_unitario = Convert.ToDecimal(productsTable.CurrentRow.Cells[2].Value)
+                };
+                totalAcumulated = procedures.Cart(cartTable, productos, null, 'A', cantidad, totalAcumulated, totalTxt);
+            }
+            procedures.LimpiarCampos(new List<TextBox> { cantInp });
         }
 
         private void deleteItemCartBtn_Click(object sender, EventArgs e)
         {
+            if (cartTable.CurrentRow == null)
+            {
+                MessageBox.Show("No hay productos en el carrito para eliminar.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             var productSelected = cartTable.CurrentRow;
-            cartTable.Rows.Remove(productSelected);
-            totalAcumulated -= Decimal.Parse(cartTable.CurrentRow.Cells[2].Value.ToString());
-            totalTxt.Text = "Total: $" + totalAcumulated.ToString();
+            Productos productos = new Productos
+            {
+                id_prod = Convert.ToInt32(cartTable.CurrentRow.Cells[0].Value),
+                descripcion = cartTable.CurrentRow.Cells[1].Value.ToString(),
+                precio_unitario = Convert.ToDecimal(cartTable.CurrentRow.Cells[2].Value)
+            };
+            Procedures procedure = new Procedures();
+            totalAcumulated = procedure.Cart(cartTable, productos, productSelected, 'D', 0, totalAcumulated, totalTxt);
+            procedure.LimpiarCampos(new List<TextBox> { cantInp });
         }
     }
 }
