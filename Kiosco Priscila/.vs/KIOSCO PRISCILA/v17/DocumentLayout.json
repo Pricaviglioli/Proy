@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\EZEQUIELEITOR\\source\\repos\\KIOSCO PRISCILA\\Kiosco Priscila\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{57924F70-E2F3-4911-8F02-A877F8A02815}|Kiosco_2025\\Kiosco_2025.csproj|C:\\Users\\EZEQUIELEITOR\\source\\repos\\KIOSCO PRISCILA\\Kiosco Priscila\\kiosco_2025\\sections\\user\\frmmainu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{57924F70-E2F3-4911-8F02-A877F8A02815}|Kiosco_2025\\Kiosco_2025.csproj|solutionrelative:kiosco_2025\\sections\\user\\frmmainu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{57924F70-E2F3-4911-8F02-A877F8A02815}|Kiosco_2025\\Kiosco_2025.csproj|c:\\users\\ezequieleitor\\source\\repos\\kiosco priscila\\kiosco priscila\\kiosco_2025\\utilities\\procedures.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57924F70-E2F3-4911-8F02-A877F8A02815}|Kiosco_2025\\Kiosco_2025.csproj|solutionrelative:kiosco_2025\\utilities\\procedures.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{57924F70-E2F3-4911-8F02-A877F8A02815}|Kiosco_2025\\Kiosco_2025.csproj|c:\\users\\ezequieleitor\\source\\repos\\kiosco priscila\\kiosco priscila\\kiosco_2025\\sections\\user\\frmmainu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57924F70-E2F3-4911-8F02-A877F8A02815}|Kiosco_2025\\Kiosco_2025.csproj|solutionrelative:kiosco_2025\\sections\\user\\frmmainu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{57924F70-E2F3-4911-8F02-A877F8A02815}|Kiosco_2025\\Kiosco_2025.csproj|c:\\users\\ezequieleitor\\source\\repos\\kiosco priscila\\kiosco priscila\\kiosco_2025\\sections\\admin\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{57924F70-E2F3-4911-8F02-A877F8A02815}|Kiosco_2025\\Kiosco_2025.csproj|solutionrelative:kiosco_2025\\sections\\admin\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,41 +26,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Procedures.cs",
-              "DocumentMoniker": "C:\\Users\\EZEQUIELEITOR\\source\\repos\\KIOSCO PRISCILA\\Kiosco Priscila\\Kiosco_2025\\Utilities\\Procedures.cs",
-              "RelativeDocumentMoniker": "Kiosco_2025\\Utilities\\Procedures.cs",
-              "ToolTip": "C:\\Users\\EZEQUIELEITOR\\source\\repos\\KIOSCO PRISCILA\\Kiosco Priscila\\Kiosco_2025\\Utilities\\Procedures.cs",
-              "RelativeToolTip": "Kiosco_2025\\Utilities\\Procedures.cs",
-              "ViewState": "AgIAAF4AAAAAAAAAAAAQwGIAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T21:50:02.404Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frmMainU.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\EZEQUIELEITOR\\source\\repos\\KIOSCO PRISCILA\\Kiosco Priscila\\Kiosco_2025\\Sections\\User\\frmMainU.cs",
-              "RelativeDocumentMoniker": "Kiosco_2025\\Sections\\User\\frmMainU.cs",
-              "ToolTip": "C:\\Users\\EZEQUIELEITOR\\source\\repos\\KIOSCO PRISCILA\\Kiosco Priscila\\Kiosco_2025\\Sections\\User\\frmMainU.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Kiosco_2025\\Sections\\User\\frmMainU.cs [Dise\u00F1o]",
+              "Title": "frmMain.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\EZEQUIELEITOR\\source\\repos\\KIOSCO PRISCILA\\Kiosco Priscila\\Kiosco_2025\\Sections\\Admin\\frmMain.cs",
+              "RelativeDocumentMoniker": "Kiosco_2025\\Sections\\Admin\\frmMain.cs",
+              "ToolTip": "C:\\Users\\EZEQUIELEITOR\\source\\repos\\KIOSCO PRISCILA\\Kiosco Priscila\\Kiosco_2025\\Sections\\Admin\\frmMain.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Kiosco_2025\\Sections\\Admin\\frmMain.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T02:01:39.889Z",
+              "WhenOpened": "2025-07-12T15:53:03.883Z",
               "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmMainU.cs",
-              "DocumentMoniker": "C:\\Users\\EZEQUIELEITOR\\source\\repos\\KIOSCO PRISCILA\\Kiosco Priscila\\Kiosco_2025\\Sections\\User\\frmMainU.cs",
-              "RelativeDocumentMoniker": "Kiosco_2025\\Sections\\User\\frmMainU.cs",
-              "ToolTip": "C:\\Users\\EZEQUIELEITOR\\source\\repos\\KIOSCO PRISCILA\\Kiosco Priscila\\Kiosco_2025\\Sections\\User\\frmMainU.cs",
-              "RelativeToolTip": "Kiosco_2025\\Sections\\User\\frmMainU.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAIwIMAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T01:49:26.36Z",
-              "EditorCaption": ""
             }
           ]
         }

@@ -12,5 +12,16 @@ namespace Kiosco_2025.Clases
         public string username;
         public string password;
         public string rol;
+
+
+        public User setUsuario(int id_usuario, string username, string password, string rol)
+        {
+            User user = new User();
+            user.id_usuario = id_usuario;
+            user.username = username;
+            user.password = password;
+            user.rol = rol;
+            return user;
+        }
     }
 }

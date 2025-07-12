@@ -23,7 +23,7 @@ id_detalleVta INT PRIMARY KEY IDENTITY(1,1),
 id_vta INT FOREIGN KEY REFERENCES Venta(id_vta),
 id_prod INT FOREIGN KEY REFERENCES Productos(id_prod),
 cantidad DECIMAL(18,2),
-fecha DATETIME,
+fecha DATE,
 subtotal DECIMAL(18,2)
 );
 

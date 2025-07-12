@@ -36,7 +36,7 @@ namespace Kiosco_2025.Sections.Admin
         {
             Procedures procedures = new Procedures();
             Productos producto = new Productos();
-            producto = procedures.ParseDataProd(producto, idProdInp.Text, descprodInp.Text, priceInp.Text);
+            producto = producto.setProductos(idProdInp.Text, descprodInp.Text, priceInp.Text);
             if (producto == null)
             {
                 procedures.LimpiarCampos(new List<TextBox> { idProdInp, descprodInp, priceInp });

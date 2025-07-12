@@ -62,7 +62,7 @@
             this.divDelUsers.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 87F));
             this.divDelUsers.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98F));
             this.divDelUsers.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 156F));
-            this.divDelUsers.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 96F));
+            this.divDelUsers.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 97F));
             this.divDelUsers.Controls.Add(this.usersTable, 1, 0);
             this.divDelUsers.Controls.Add(this.idUserInp, 4, 1);
             this.divDelUsers.Controls.Add(this.usernameTxt, 2, 2);
@@ -104,6 +104,7 @@
             this.usersTable.Location = new System.Drawing.Point(104, 3);
             this.usersTable.Name = "usersTable";
             this.usersTable.ReadOnly = true;
+            this.usersTable.RowHeadersWidth = 62;
             this.usersTable.Size = new System.Drawing.Size(751, 295);
             this.usersTable.TabIndex = 4;
             this.usersTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.usersTable_CellContentClick);
@@ -113,7 +114,7 @@
             this.idUserInp.AcceptsTab = true;
             this.idUserInp.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.divDelUsers.SetColumnSpan(this.idUserInp, 2);
-            this.idUserInp.Location = new System.Drawing.Point(550, 332);
+            this.idUserInp.Location = new System.Drawing.Point(549, 332);
             this.idUserInp.Name = "idUserInp";
             this.idUserInp.ReadOnly = true;
             this.idUserInp.Size = new System.Drawing.Size(145, 20);
@@ -125,9 +126,9 @@
             this.usernameTxt.AutoSize = true;
             this.divDelUsers.SetColumnSpan(this.usernameTxt, 2);
             this.usernameTxt.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameTxt.Location = new System.Drawing.Point(306, 389);
+            this.usernameTxt.Location = new System.Drawing.Point(308, 370);
             this.usernameTxt.Name = "usernameTxt";
-            this.usernameTxt.Size = new System.Drawing.Size(211, 24);
+            this.usernameTxt.Size = new System.Drawing.Size(206, 62);
             this.usernameTxt.TabIndex = 10;
             this.usernameTxt.Text = "Nombre de usuario:";
             // 
@@ -136,8 +137,9 @@
             this.usernameInp.AcceptsTab = true;
             this.usernameInp.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.divDelUsers.SetColumnSpan(this.usernameInp, 2);
-            this.usernameInp.Location = new System.Drawing.Point(551, 391);
+            this.usernameInp.Location = new System.Drawing.Point(550, 391);
             this.usernameInp.Name = "usernameInp";
+            this.usernameInp.ReadOnly = true;
             this.usernameInp.Size = new System.Drawing.Size(143, 20);
             this.usernameInp.TabIndex = 11;
             // 
@@ -146,9 +148,10 @@
             this.passwrdInp.AcceptsTab = true;
             this.passwrdInp.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.divDelUsers.SetColumnSpan(this.passwrdInp, 2);
-            this.passwrdInp.Location = new System.Drawing.Point(551, 450);
+            this.passwrdInp.Location = new System.Drawing.Point(550, 450);
             this.passwrdInp.Name = "passwrdInp";
             this.passwrdInp.PasswordChar = '*';
+            this.passwrdInp.ReadOnly = true;
             this.passwrdInp.Size = new System.Drawing.Size(143, 20);
             this.passwrdInp.TabIndex = 12;
             // 
@@ -158,9 +161,9 @@
             this.passwrdTxt.AutoSize = true;
             this.divDelUsers.SetColumnSpan(this.passwrdTxt, 2);
             this.passwrdTxt.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwrdTxt.Location = new System.Drawing.Point(298, 449);
+            this.passwrdTxt.Location = new System.Drawing.Point(315, 432);
             this.passwrdTxt.Name = "passwrdTxt";
-            this.passwrdTxt.Size = new System.Drawing.Size(227, 22);
+            this.passwrdTxt.Size = new System.Drawing.Size(191, 56);
             this.passwrdTxt.TabIndex = 13;
             this.passwrdTxt.Text = "Contraseña del usuario:";
             // 
@@ -170,9 +173,9 @@
             this.idUserTxt.AutoSize = true;
             this.divDelUsers.SetColumnSpan(this.idUserTxt, 2);
             this.idUserTxt.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idUserTxt.Location = new System.Drawing.Point(321, 327);
+            this.idUserTxt.Location = new System.Drawing.Point(334, 314);
             this.idUserTxt.Name = "idUserTxt";
-            this.idUserTxt.Size = new System.Drawing.Size(181, 30);
+            this.idUserTxt.Size = new System.Drawing.Size(153, 56);
             this.idUserTxt.TabIndex = 8;
             this.idUserTxt.Text = "ID del usuario:";
             // 
@@ -180,7 +183,7 @@
             // 
             this.idprodImg.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.idprodImg.Image = ((System.Drawing.Image)(resources.GetObject("idprodImg.Image")));
-            this.idprodImg.Location = new System.Drawing.Point(239, 318);
+            this.idprodImg.Location = new System.Drawing.Point(238, 318);
             this.idprodImg.Name = "idprodImg";
             this.idprodImg.Size = new System.Drawing.Size(52, 48);
             this.idprodImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -191,7 +194,7 @@
             // 
             this.prodImg.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.prodImg.Image = ((System.Drawing.Image)(resources.GetObject("prodImg.Image")));
-            this.prodImg.Location = new System.Drawing.Point(239, 375);
+            this.prodImg.Location = new System.Drawing.Point(238, 375);
             this.prodImg.Name = "prodImg";
             this.prodImg.Size = new System.Drawing.Size(52, 52);
             this.prodImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -202,7 +205,7 @@
             // 
             this.priceImg.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.priceImg.Image = ((System.Drawing.Image)(resources.GetObject("priceImg.Image")));
-            this.priceImg.Location = new System.Drawing.Point(239, 436);
+            this.priceImg.Location = new System.Drawing.Point(238, 436);
             this.priceImg.Name = "priceImg";
             this.priceImg.Size = new System.Drawing.Size(52, 48);
             this.priceImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -214,7 +217,7 @@
             this.delUserBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.divDelUsers.SetColumnSpan(this.delUserBtn, 4);
             this.delUserBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.delUserBtn.Location = new System.Drawing.Point(444, 565);
+            this.delUserBtn.Location = new System.Drawing.Point(443, 565);
             this.delUserBtn.Margin = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.delUserBtn.Name = "delUserBtn";
             this.delUserBtn.Size = new System.Drawing.Size(151, 38);
@@ -229,9 +232,9 @@
             this.roleTxt.AutoSize = true;
             this.divDelUsers.SetColumnSpan(this.roleTxt, 2);
             this.roleTxt.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roleTxt.Location = new System.Drawing.Point(315, 501);
+            this.roleTxt.Location = new System.Drawing.Point(334, 488);
             this.roleTxt.Name = "roleTxt";
-            this.roleTxt.Size = new System.Drawing.Size(194, 30);
+            this.roleTxt.Size = new System.Drawing.Size(153, 57);
             this.roleTxt.TabIndex = 18;
             this.roleTxt.Text = "Rol del usuario:";
             // 
@@ -239,7 +242,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(239, 492);
+            this.pictureBox1.Location = new System.Drawing.Point(238, 492);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(52, 48);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -254,7 +257,7 @@
             this.roleInp.Items.AddRange(new object[] {
             "Administrador",
             "Usuario"});
-            this.roleInp.Location = new System.Drawing.Point(552, 506);
+            this.roleInp.Location = new System.Drawing.Point(551, 506);
             this.roleInp.Name = "roleInp";
             this.roleInp.Size = new System.Drawing.Size(140, 21);
             this.roleInp.TabIndex = 23;

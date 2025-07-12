@@ -35,12 +35,9 @@ namespace Kiosco_2025.Sections.Admin
 
         private void addUserBtn_Click(object sender, EventArgs e)
         {
-            Clases.User user = new Clases.User();
             Procedures procedure = new Procedures();
-            user.id_usuario = int.Parse(idUserInp.Text);
-            user.username = usernameInp.Text;
-            user.password = passwrdInp.Text;
-            user.rol = roleInp.Text;
+            Clases.User user = new Clases.User();
+            user = user.setUsuario(int.Parse(idUserInp.Text), usernameInp.Text, passwrdInp.Text, roleInp.Text);
             procedure.AgregarDatos("spu_agregar_user", new List<string> { "@id_usuario", "@username", "@password", "@rol" }, new List<object> { user.id_usuario, user.username, user.password, user.rol});
         }
     }

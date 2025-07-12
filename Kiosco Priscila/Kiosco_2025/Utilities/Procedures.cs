@@ -212,24 +212,6 @@ namespace Kiosco_2025.Utilities
         }
 
 
-
-        public Productos ParseDataProd(Productos producto, string id, string nombre, string precio)
-        {
-            if (!int.TryParse(id, out int idProd) || !decimal.TryParse(precio, out decimal precioUnitario))
-            {
-                MessageBox.Show("Error al parsear los datos del producto. Por favor, verifique los valores ingresados.", "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return null;
-            }
-            else
-            {
-                producto.id_prod = idProd;
-                producto.descripcion = nombre;
-                producto.precio_unitario = precioUnitario;
-                return producto;
-            }
-        }
-
-
         public void LimpiarCampos(List<TextBox> textBoxes)
         {
             foreach (TextBox textBox in textBoxes)
