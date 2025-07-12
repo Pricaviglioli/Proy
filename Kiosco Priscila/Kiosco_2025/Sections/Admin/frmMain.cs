@@ -13,6 +13,7 @@ namespace Kiosco_2025.Sections.Admin
 {
     public partial class frmMain : Form
     {
+        Procedures procedures = new Procedures();
         public frmMain()
         {
             InitializeComponent();
@@ -20,40 +21,37 @@ namespace Kiosco_2025.Sections.Admin
 
         private void agregarProductosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Procedures procedures = new Procedures();
             procedures.openMDIContainers(new frmAddProducts(), this);
         }
 
-
-
         private void eliminarProductosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Procedures procedures = new Procedures();
             procedures.openMDIContainers(new frmDeleteProducts(), this);
         }
 
         private void modificarProductosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Procedures procedures = new Procedures();
             procedures.openMDIContainers(new frmModProducts(), this);
         }
 
         private void agregarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Procedures procedures = new Procedures();
             procedures.openMDIContainers(new frmAddUsers(), this);
         }
 
         private void eliminarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Procedures procedures = new Procedures();
             procedures.openMDIContainers(new frmDelUsers(), this);
         }
 
         private void modificarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Procedures procedures = new Procedures();
             procedures.openMDIContainers(new frmModUsers(), this);
+        }
+
+        private void ventasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            procedures.openMDIContainers(new frmVentas(), this);
         }
     }
 }

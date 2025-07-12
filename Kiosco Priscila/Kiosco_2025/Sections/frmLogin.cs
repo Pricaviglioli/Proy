@@ -18,6 +18,8 @@ namespace Kiosco_2025
 {
     public partial class frmLogin : Form
     {
+        Procedures procedures = new Procedures();
+        Conexion conexion = new Conexion();
         public frmLogin()
         {
             InitializeComponent();
@@ -25,17 +27,14 @@ namespace Kiosco_2025
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-            Conexion conexion = new Conexion();
             conexion.Connect();
-            Procedures procedure = new Procedures();
-            procedure.MostrarDatos("spu_mostrar_usuarios", usersTable, new List<string> { "ID", "Nombre de usuario", "Contraseña", "Rol" });
+            procedures.MostrarDatos("spu_mostrar_usuarios", usersTable, new List<string> { "ID", "Nombre de usuario", "Contraseña", "Rol" });
         }
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
             var userInps = (userInp.Text, passwrdInp.Text);
             var users = new List<(string, string, string)>();
-            Procedures procedures = new Procedures();
             string response = procedures.Logincomparision(usersTable, userInps, users);
             if (response == "Administrador")
             {

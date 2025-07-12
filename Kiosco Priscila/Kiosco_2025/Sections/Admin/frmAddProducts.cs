@@ -14,6 +14,8 @@ namespace Kiosco_2025.Sections.Admin
 {
     public partial class frmAddProducts : Form
     {
+        Procedures procedure = new Procedures();
+        Productos producto = new Productos();
         public frmAddProducts()
         {
             InitializeComponent();
@@ -21,7 +23,6 @@ namespace Kiosco_2025.Sections.Admin
 
         private void frmAddProducts_Load(object sender, EventArgs e)
         {
-            Procedures procedure = new Procedures();
             procedure.MostrarDatos("spu_mostrar_prods", productsTable, new List<string> { "ID", "Producto", "Precio Unitario" });
             idProdInp.Text = productsTable.Rows.Count.ToString();
         }
@@ -34,8 +35,6 @@ namespace Kiosco_2025.Sections.Admin
 
         private void addprodBtn_Click(object sender, EventArgs e)
         {
-            Procedures procedure = new Procedures();
-            Productos producto = new Productos();
             producto = producto.setProductos(idProdInp.Text, descprodInp.Text, priceInp.Text);
             if (producto == null)
             {

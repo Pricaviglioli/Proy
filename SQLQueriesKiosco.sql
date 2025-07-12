@@ -123,3 +123,77 @@ AS
 SELECT * FROM Venta
 
 SELECT * FROM DetalleVta
+
+SELECT
+  DetalleVta.id_detalleVta   AS DetalleID,
+  Venta.id_vta               AS VentaID,
+  Productos.descripcion      AS Producto,
+  DetalleVta.cantidad        AS Cantidad,
+  DetalleVta.subtotal        AS Subtotal,
+  DetalleVta.fecha           AS Fecha,
+  Venta.tipo_pago            AS TipoPago,
+  Venta.total                AS TotalVenta
+FROM DetalleVta
+INNER JOIN Venta
+  ON DetalleVta.id_vta = Venta.id_vta
+INNER JOIN Productos
+  ON DetalleVta.id_prod = Productos.id_prod
+ORDER BY
+  Venta.id_vta,
+  DetalleVta.id_detalleVta;
+
+
+ CREATE PROCEDURE spu_mostrar_vtas
+ AS
+ SELECT
+  DetalleVta.id_detalleVta   AS DetalleID,
+  Venta.id_vta               AS VentaID,
+  Productos.descripcion      AS Producto,
+  DetalleVta.cantidad        AS Cantidad,
+  DetalleVta.subtotal        AS Subtotal,
+  DetalleVta.fecha           AS Fecha,
+  Venta.tipo_pago            AS TipoPago,
+  Venta.total                AS TotalVenta
+FROM DetalleVta
+INNER JOIN Venta
+  ON DetalleVta.id_vta = Venta.id_vta
+INNER JOIN Productos
+  ON DetalleVta.id_prod = Productos.id_prod
+ORDER BY
+  Venta.id_vta,
+  DetalleVta.id_detalleVta;
+
+
+  CREATE PROCEDURE spu_buscar_ventas
+  @fecha_inicio DATE         = NULL, 
+  @fecha_fin    DATE         = NULL,
+  @descripcion  NVARCHAR(60) = NULL,
+  @tipo_pago    NVARCHAR(13) = NULL
+AS
+BEGIN
+  SET NOCOUNT ON;
+
+  SELECT
+    Venta.id_vta,
+    Venta.tipo_pago,
+    Venta.total,
+    DetalleVta.id_detalleVta,
+    DetalleVta.fecha,
+    Productos.descripcion      AS Producto,
+    DetalleVta.cantidad,
+    DetalleVta.subtotal
+  FROM Venta
+  INNER JOIN DetalleVta
+    ON Venta.id_vta = DetalleVta.id_vta
+  INNER JOIN Productos
+    ON DetalleVta.id_prod = Productos.id_prod
+  WHERE
+    (@fecha_inicio IS NULL OR DetalleVta.fecha >= @fecha_inicio)
+    AND (@fecha_fin    IS NULL OR DetalleVta.fecha <= @fecha_fin)
+    AND (@descripcion IS NULL OR Productos.descripcion LIKE '%' + @descripcion + '%')
+    AND (@tipo_pago   IS NULL OR Venta.tipo_pago = @tipo_pago)
+  ORDER BY Venta.id_vta, DetalleVta.id_detalleVta;
+END
+
+
+EXEC spu_buscar_ventas

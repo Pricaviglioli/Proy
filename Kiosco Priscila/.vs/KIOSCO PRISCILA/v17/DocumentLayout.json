@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\EZEQUIELEITOR\\source\\repos\\KIOSCO PRISCILA\\Kiosco Priscila\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{57924F70-E2F3-4911-8F02-A877F8A02815}|Kiosco_2025\\Kiosco_2025.csproj|c:\\users\\ezequieleitor\\source\\repos\\kiosco priscila\\kiosco priscila\\kiosco_2025\\sections\\admin\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{57924F70-E2F3-4911-8F02-A877F8A02815}|Kiosco_2025\\Kiosco_2025.csproj|solutionrelative:kiosco_2025\\sections\\admin\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{57924F70-E2F3-4911-8F02-A877F8A02815}|Kiosco_2025\\Kiosco_2025.csproj|c:\\users\\ezequieleitor\\source\\repos\\kiosco priscila\\kiosco priscila\\kiosco_2025\\log.md||{24510B54-A648-4D69-A6C5-F68CBDF07546}",
+      "RelativeMoniker": "D:0:0:{57924F70-E2F3-4911-8F02-A877F8A02815}|Kiosco_2025\\Kiosco_2025.csproj|solutionrelative:kiosco_2025\\log.md||{24510B54-A648-4D69-A6C5-F68CBDF07546}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57924F70-E2F3-4911-8F02-A877F8A02815}|Kiosco_2025\\Kiosco_2025.csproj|c:\\users\\ezequieleitor\\source\\repos\\kiosco priscila\\kiosco priscila\\kiosco_2025\\utilities\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57924F70-E2F3-4911-8F02-A877F8A02815}|Kiosco_2025\\Kiosco_2025.csproj|solutionrelative:kiosco_2025\\utilities\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57924F70-E2F3-4911-8F02-A877F8A02815}|Kiosco_2025\\Kiosco_2025.csproj|C:\\Users\\EZEQUIELEITOR\\source\\repos\\KIOSCO PRISCILA\\Kiosco Priscila\\kiosco_2025\\utilities\\procedures.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57924F70-E2F3-4911-8F02-A877F8A02815}|Kiosco_2025\\Kiosco_2025.csproj|solutionrelative:kiosco_2025\\utilities\\procedures.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,14 +35,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frmMain.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\EZEQUIELEITOR\\source\\repos\\KIOSCO PRISCILA\\Kiosco Priscila\\Kiosco_2025\\Sections\\Admin\\frmMain.cs",
-              "RelativeDocumentMoniker": "Kiosco_2025\\Sections\\Admin\\frmMain.cs",
-              "ToolTip": "C:\\Users\\EZEQUIELEITOR\\source\\repos\\KIOSCO PRISCILA\\Kiosco Priscila\\Kiosco_2025\\Sections\\Admin\\frmMain.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Kiosco_2025\\Sections\\Admin\\frmMain.cs [Dise\u00F1o]",
+              "Title": "log.md",
+              "DocumentMoniker": "C:\\Users\\EZEQUIELEITOR\\source\\repos\\KIOSCO PRISCILA\\Kiosco Priscila\\Kiosco_2025\\log.md",
+              "RelativeDocumentMoniker": "Kiosco_2025\\log.md",
+              "ToolTip": "C:\\Users\\EZEQUIELEITOR\\source\\repos\\KIOSCO PRISCILA\\Kiosco Priscila\\Kiosco_2025\\log.md",
+              "RelativeToolTip": "Kiosco_2025\\log.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-07-12T23:55:40.21Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Procedures.cs",
+              "DocumentMoniker": "C:\\Users\\EZEQUIELEITOR\\source\\repos\\KIOSCO PRISCILA\\Kiosco Priscila\\Kiosco_2025\\Utilities\\Procedures.cs",
+              "RelativeDocumentMoniker": "Kiosco_2025\\Utilities\\Procedures.cs",
+              "ToolTip": "C:\\Users\\EZEQUIELEITOR\\source\\repos\\KIOSCO PRISCILA\\Kiosco Priscila\\Kiosco_2025\\Utilities\\Procedures.cs",
+              "RelativeToolTip": "Kiosco_2025\\Utilities\\Procedures.cs",
+              "ViewState": "AgIAAIwAAAAAAAAAAAAAANsAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-12T15:53:03.883Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-07-12T23:37:43.171Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\EZEQUIELEITOR\\source\\repos\\KIOSCO PRISCILA\\Kiosco Priscila\\Kiosco_2025\\Utilities\\Program.cs",
+              "RelativeDocumentMoniker": "Kiosco_2025\\Utilities\\Program.cs",
+              "ToolTip": "C:\\Users\\EZEQUIELEITOR\\source\\repos\\KIOSCO PRISCILA\\Kiosco Priscila\\Kiosco_2025\\Utilities\\Program.cs",
+              "RelativeToolTip": "Kiosco_2025\\Utilities\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T23:37:43.583Z",
+              "EditorCaption": ""
             }
           ]
         }

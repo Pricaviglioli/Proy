@@ -14,6 +14,8 @@ namespace Kiosco_2025.Sections.Admin
 {
     public partial class frmDelUsers : Form
     {
+        Procedures procedure = new Procedures();
+        Clases.User user = new Clases.User();
         public frmDelUsers()
         {
             InitializeComponent();
@@ -21,7 +23,6 @@ namespace Kiosco_2025.Sections.Admin
 
         private void frmDelUsers_Load(object sender, EventArgs e)
         {
-            Procedures procedure = new Procedures();
             procedure.MostrarDatos("spu_mostrar_usuarios", usersTable, new List<string> { "ID", "Nombre de usuario", "Contraseña", "Rol" });
         }
 
@@ -35,8 +36,6 @@ namespace Kiosco_2025.Sections.Admin
 
         private void delUserBtn_Click(object sender, EventArgs e)
         {
-            Procedures procedure = new Procedures();
-            Clases.User user = new Clases.User();
             user = user.setUsuario(int.Parse(idUserInp.Text), usernameInp.Text, passwrdInp.Text, roleInp.Text);
             if (MessageBox.Show("¿Estás seguro de que deseas eliminar este usuario?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {

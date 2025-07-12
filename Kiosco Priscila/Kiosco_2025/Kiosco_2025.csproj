@@ -112,6 +112,12 @@
     <Compile Include="Sections\Admin\frmModUsers.Designer.cs">
       <DependentUpon>frmModUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sections\Admin\frmVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sections\Admin\frmVentas.Designer.cs">
+      <DependentUpon>frmVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sections\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +155,9 @@
     <EmbeddedResource Include="Sections\Admin\frmModUsers.resx">
       <DependentUpon>frmModUsers.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sections\Admin\frmVentas.resx">
+      <DependentUpon>frmVentas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sections\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,6 +173,7 @@
     <EmbeddedResource Include="Sections\User\frmMainU.resx">
       <DependentUpon>frmMainU.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="log.md" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

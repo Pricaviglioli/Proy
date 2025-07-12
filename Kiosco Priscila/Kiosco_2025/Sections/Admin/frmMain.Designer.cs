@@ -46,7 +46,6 @@
             // menuAdmin
             // 
             this.menuAdmin.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuAdmin.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuAdmin.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuAdmin.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AppImg,
@@ -55,7 +54,7 @@
             this.ventasToolStripMenuItem1});
             this.menuAdmin.Location = new System.Drawing.Point(0, 0);
             this.menuAdmin.Name = "menuAdmin";
-            this.menuAdmin.Size = new System.Drawing.Size(1177, 51);
+            this.menuAdmin.Size = new System.Drawing.Size(1177, 38);
             this.menuAdmin.TabIndex = 0;
             this.menuAdmin.Text = "menuStrip1";
             // 
@@ -64,7 +63,7 @@
             this.AppImg.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.AppImg.Image = ((System.Drawing.Image)(resources.GetObject("AppImg.Image")));
             this.AppImg.Name = "AppImg";
-            this.AppImg.Size = new System.Drawing.Size(40, 47);
+            this.AppImg.Size = new System.Drawing.Size(36, 34);
             // 
             // sToolStripMenuItem
             // 
@@ -77,7 +76,7 @@
             this.modificarUsuariosToolStripMenuItem});
             this.sToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sToolStripMenuItem.Name = "sToolStripMenuItem";
-            this.sToolStripMenuItem.Size = new System.Drawing.Size(148, 47);
+            this.sToolStripMenuItem.Size = new System.Drawing.Size(103, 34);
             this.sToolStripMenuItem.Text = "Kiosco";
             // 
             // agregarProductosToolStripMenuItem
@@ -85,7 +84,7 @@
             this.agregarProductosToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.agregarProductosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("agregarProductosToolStripMenuItem.Image")));
             this.agregarProductosToolStripMenuItem.Name = "agregarProductosToolStripMenuItem";
-            this.agregarProductosToolStripMenuItem.Size = new System.Drawing.Size(413, 44);
+            this.agregarProductosToolStripMenuItem.Size = new System.Drawing.Size(265, 26);
             this.agregarProductosToolStripMenuItem.Text = "Agregar Productos";
             this.agregarProductosToolStripMenuItem.Click += new System.EventHandler(this.agregarProductosToolStripMenuItem_Click);
             // 
@@ -94,7 +93,7 @@
             this.eliminarProductosToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eliminarProductosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("eliminarProductosToolStripMenuItem.Image")));
             this.eliminarProductosToolStripMenuItem.Name = "eliminarProductosToolStripMenuItem";
-            this.eliminarProductosToolStripMenuItem.Size = new System.Drawing.Size(413, 44);
+            this.eliminarProductosToolStripMenuItem.Size = new System.Drawing.Size(265, 26);
             this.eliminarProductosToolStripMenuItem.Text = "Eliminar Productos";
             this.eliminarProductosToolStripMenuItem.Click += new System.EventHandler(this.eliminarProductosToolStripMenuItem_Click);
             // 
@@ -103,7 +102,7 @@
             this.modificarProductosToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.modificarProductosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("modificarProductosToolStripMenuItem.Image")));
             this.modificarProductosToolStripMenuItem.Name = "modificarProductosToolStripMenuItem";
-            this.modificarProductosToolStripMenuItem.Size = new System.Drawing.Size(413, 44);
+            this.modificarProductosToolStripMenuItem.Size = new System.Drawing.Size(265, 26);
             this.modificarProductosToolStripMenuItem.Text = "Modificar Productos";
             this.modificarProductosToolStripMenuItem.Click += new System.EventHandler(this.modificarProductosToolStripMenuItem_Click);
             // 
@@ -112,7 +111,7 @@
             this.agregarUsuariosToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.agregarUsuariosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("agregarUsuariosToolStripMenuItem.Image")));
             this.agregarUsuariosToolStripMenuItem.Name = "agregarUsuariosToolStripMenuItem";
-            this.agregarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(413, 44);
+            this.agregarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(265, 26);
             this.agregarUsuariosToolStripMenuItem.Text = "Agregar usuarios";
             this.agregarUsuariosToolStripMenuItem.Click += new System.EventHandler(this.agregarUsuariosToolStripMenuItem_Click);
             // 
@@ -121,7 +120,7 @@
             this.eliminarUsuariosToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eliminarUsuariosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("eliminarUsuariosToolStripMenuItem.Image")));
             this.eliminarUsuariosToolStripMenuItem.Name = "eliminarUsuariosToolStripMenuItem";
-            this.eliminarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(413, 44);
+            this.eliminarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(265, 26);
             this.eliminarUsuariosToolStripMenuItem.Text = "Eliminar usuarios";
             this.eliminarUsuariosToolStripMenuItem.Click += new System.EventHandler(this.eliminarUsuariosToolStripMenuItem_Click);
             // 
@@ -130,7 +129,7 @@
             this.modificarUsuariosToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.modificarUsuariosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("modificarUsuariosToolStripMenuItem.Image")));
             this.modificarUsuariosToolStripMenuItem.Name = "modificarUsuariosToolStripMenuItem";
-            this.modificarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(413, 44);
+            this.modificarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(265, 26);
             this.modificarUsuariosToolStripMenuItem.Text = "Modificar usuarios";
             this.modificarUsuariosToolStripMenuItem.Click += new System.EventHandler(this.modificarUsuariosToolStripMenuItem_Click);
             // 
@@ -139,18 +138,19 @@
             this.ventasToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.ventasToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ventasToolStripMenuItem.Image")));
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(40, 47);
+            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(36, 34);
             this.ventasToolStripMenuItem.Text = "Ventas";
             // 
             // ventasToolStripMenuItem1
             // 
             this.ventasToolStripMenuItem1.Name = "ventasToolStripMenuItem1";
-            this.ventasToolStripMenuItem1.Size = new System.Drawing.Size(156, 47);
+            this.ventasToolStripMenuItem1.Size = new System.Drawing.Size(107, 34);
             this.ventasToolStripMenuItem1.Text = "Ventas";
+            this.ventasToolStripMenuItem1.Click += new System.EventHandler(this.ventasToolStripMenuItem1_Click);
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(1177, 691);

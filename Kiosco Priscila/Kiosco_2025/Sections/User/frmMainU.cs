@@ -16,6 +16,8 @@ namespace Kiosco_2025.Sections.User
     public partial class frmMainU : Form
     {
         Decimal totalAcumulated;
+
+        Procedures procedure = new Procedures();
         public frmMainU()
         {
             InitializeComponent();
@@ -23,7 +25,6 @@ namespace Kiosco_2025.Sections.User
 
         private void frmMainU_Load(object sender, EventArgs e)
         {
-            Procedures procedure = new Procedures();
             procedure.MostrarDatos("spu_mostrar_prods", productsTable, new List<string> { "ID", "Producto", "Precio Unitario"});
 
 
@@ -36,7 +37,6 @@ namespace Kiosco_2025.Sections.User
 
         private void searchImg_Click(object sender, EventArgs e)
         {
-            Procedures procedure = new Procedures();
             procedure.BuscarDatos("spu_buscarprod_nombre", productsTable, "@nombre_prod", searchProdInp.Text, new List<string> { "ID", "Producto", "Precio Unitario" });
         }
 
@@ -47,7 +47,6 @@ namespace Kiosco_2025.Sections.User
                 MessageBox.Show("Por favor, seleccione un producto para agregar al carrito.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            Procedures procedures = new Procedures();
             if (!decimal.TryParse(cantInp.Text, out decimal subtotal) || subtotal <= 0)
             {
                 MessageBox.Show("Por favor, ingrese una cantidad válida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -61,9 +60,9 @@ namespace Kiosco_2025.Sections.User
                     descripcion = productsTable.CurrentRow.Cells[1].Value.ToString(),
                     precio_unitario = Convert.ToDecimal(productsTable.CurrentRow.Cells[2].Value)
                 };
-                totalAcumulated = procedures.Cart(cartTable, productos, null, 'A', int.Parse(cantInp.Text), subtotal , totalAcumulated, totalTxt);
+                totalAcumulated = procedure.Cart(cartTable, productos, null, 'A', int.Parse(cantInp.Text), subtotal , totalAcumulated, totalTxt);
             }
-            procedures.LimpiarCampos(new List<TextBox> { cantInp });
+            procedure.LimpiarCampos(new List<TextBox> { cantInp });
         }
 
         private void deleteItemCartBtn_Click(object sender, EventArgs e)
@@ -80,7 +79,6 @@ namespace Kiosco_2025.Sections.User
                 descripcion = cartTable.CurrentRow.Cells[1].Value.ToString(),
                 precio_unitario = Convert.ToDecimal(cartTable.CurrentRow.Cells[2].Value)
             };
-            Procedures procedure = new Procedures();
             totalAcumulated = procedure.Cart(cartTable, productos, productSelected, 'D', 0, 0, totalAcumulated, totalTxt);
             procedure.LimpiarCampos(new List<TextBox> { cantInp });
         }
@@ -97,10 +95,9 @@ namespace Kiosco_2025.Sections.User
                 }
                 else
                 {
-                    Procedures procedures = new Procedures();
                     List<string> sqlParametersVTA = new List<string> { "@tipo_pago", "@total" };
                     List<object> parametrosVTA = new List<object> { tipoPagoSelect.SelectedItem.ToString(), totalAcumulated };
-                    procedures.AgregarDatos("spu_registrar_vta", sqlParametersVTA, parametrosVTA);
+                    procedure.AgregarDatos("spu_registrar_vta", sqlParametersVTA, parametrosVTA);
 
 
                     SqlCommand cmd = new SqlCommand("SELECT MAX(id_vta) FROM venta", new Conexion().Connect());
@@ -119,7 +116,7 @@ namespace Kiosco_2025.Sections.User
                             DateTime.Now,
                             Convert.ToDecimal(Product.Cells[2].Value)
                         };
-                        procedures.AgregarDatos("spu_registrar_detallevta", sqlParametersVTAItem, parametrosVTAItem);
+                        procedure.AgregarDatos("spu_registrar_detallevta", sqlParametersVTAItem, parametrosVTAItem);
                     }
                 }
             }
@@ -128,8 +125,8 @@ namespace Kiosco_2025.Sections.User
                 MessageBox.Show("Venta cancelada.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             cartTable.Rows.Clear();
-            cartTable.Columns.Clear();
             tipoPagoSelect.SelectedIndex = -1;
+            totalAcumulated = 0;
         }
     }
 }

@@ -13,6 +13,8 @@ namespace Kiosco_2025.Sections.Admin
 {
     public partial class frmModUsers : Form
     {
+        Procedures procedure = new Procedures();
+        Clases.User user = new Clases.User();
         public frmModUsers()
         {
             InitializeComponent();
@@ -20,7 +22,6 @@ namespace Kiosco_2025.Sections.Admin
 
         private void frmModUsers_Load(object sender, EventArgs e)
         {
-            Procedures procedure = new Procedures();
             procedure.MostrarDatos("spu_mostrar_usuarios", usersTable, new List<string> { "ID", "Nombre de usuario", "Contraseña", "Rol" });
         }
 
@@ -34,8 +35,6 @@ namespace Kiosco_2025.Sections.Admin
 
         private void modUserBtn_Click(object sender, EventArgs e)
         {
-            Procedures procedure = new Procedures();
-            Clases.User user = new Clases.User();
             user = user.setUsuario(int.Parse(idUserInp.Text), usernameInp.Text, passwrdInp.Text, roleInp.Text);
             procedure.ActualizarDatos("spu_modificar_user", new List<string> { "@id_usuario", "@username", "@password", "@rol" }, new List<object> { user.id_usuario, user.username, user.password, user.rol });
         }

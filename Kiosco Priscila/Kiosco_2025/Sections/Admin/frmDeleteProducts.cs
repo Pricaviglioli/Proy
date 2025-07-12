@@ -14,6 +14,8 @@ namespace Kiosco_2025.Sections.Admin
 {
     public partial class frmDeleteProducts : Form
     {
+        Procedures procedure = new Procedures();
+        Productos producto = new Productos();
         public frmDeleteProducts()
         {
             InitializeComponent();
@@ -21,7 +23,6 @@ namespace Kiosco_2025.Sections.Admin
 
         private void frmDeleteProducts_Load(object sender, EventArgs e)
         {
-            Procedures procedure = new Procedures();
             procedure.MostrarDatos("spu_mostrar_prods", productsTable, new List<string> { "ID", "Producto", "Precio Unitario" });
         }
 
@@ -34,8 +35,6 @@ namespace Kiosco_2025.Sections.Admin
 
         private void delprodBtn_Click(object sender, EventArgs e)
         {
-            Procedures procedure = new Procedures();
-            Productos producto = new Productos();
             producto = producto.setProductos(idProdInp.Text, descprodInp.Text, priceInp.Text);
             if (producto == null)
             {

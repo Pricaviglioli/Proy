@@ -14,6 +14,8 @@ namespace Kiosco_2025.Sections.Admin
 {
     public partial class frmModProducts : Form
     {
+        Procedures procedure = new Procedures();
+        Productos producto = new Productos();
         public frmModProducts()
         {
             InitializeComponent();
@@ -21,7 +23,6 @@ namespace Kiosco_2025.Sections.Admin
 
         private void frmModProducts_Load(object sender, EventArgs e)
         {
-            Procedures procedure = new Procedures();
             procedure.MostrarDatos("spu_mostrar_prods", productsTable, new List<string> { "ID", "Producto", "Precio Unitario" });
         }
 
@@ -34,17 +35,16 @@ namespace Kiosco_2025.Sections.Admin
 
         private void modprodBtn_Click(object sender, EventArgs e)
         {
-            Procedures procedures = new Procedures();
-            Productos producto = new Productos();
+
             producto = producto.setProductos(idProdInp.Text, descprodInp.Text, priceInp.Text);
             if (producto == null)
             {
-                procedures.LimpiarCampos(new List<TextBox> { idProdInp, descprodInp, priceInp });
+                procedure.LimpiarCampos(new List<TextBox> { idProdInp, descprodInp, priceInp });
                 return;
             }
             else
             {
-                procedures.ActualizarDatos("spu_modificar_prod", new List<string> { "@id_prod", "@descripcion", "@precio_unitario" }, new List<object> { producto.id_prod, producto.descripcion, producto.precio_unitario });
+                procedure.ActualizarDatos("spu_modificar_prod", new List<string> { "@id_prod", "@descripcion", "@precio_unitario" }, new List<object> { producto.id_prod, producto.descripcion, producto.precio_unitario });
             }
         }
     }
