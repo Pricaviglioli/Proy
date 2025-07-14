@@ -35,8 +35,20 @@ namespace Kiosco_2025.Sections.Admin
 
         private void modUserBtn_Click(object sender, EventArgs e)
         {
-            user = user.setUsuario(int.Parse(idUserInp.Text), usernameInp.Text, passwrdInp.Text, roleInp.Text);
-            procedure.ActualizarDatos("spu_modificar_user", new List<string> { "@id_usuario", "@username", "@password", "@rol" }, new List<object> { user.id_usuario, user.username, user.password, user.rol });
+            bool response = procedure.sequenceSearch(usersTable, usernameInp);
+            if (response)
+            {
+                MessageBox.Show("Ya existe un usuario con ese nombre de usuario", "Usuario existente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                procedure.LimpiarCampos(new List<TextBox> { idUserInp, usernameInp, passwrdInp });
+                roleInp.SelectedItem = -1;
+                return;
+            }
+            else
+            {
+                user = user.setUsuario(int.Parse(idUserInp.Text), usernameInp.Text, passwrdInp.Text, roleInp.Text);
+                procedure.ActualizarDatos("spu_modificar_user", new List<string> { "@id_usuario", "@username", "@password", "@rol" }, new List<object> { user.id_usuario, user.username, user.password, user.rol });
+                MessageBox.Show("Usuario modificado con éxito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

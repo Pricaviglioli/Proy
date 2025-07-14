@@ -39,12 +39,14 @@ namespace Kiosco_2025
             if (response == "Administrador")
             {
                 procedures.LimpiarCampos(new List<TextBox> { userInp, passwrdInp });
+                MessageBox.Show("Bienvenido" +userInp.Text, "Sesión inicada con éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 frmMain main = new frmMain();
                 main.ShowDialog();
             }
             else if (response == "Usuario")
             {
                 procedures.LimpiarCampos(new List<TextBox> { userInp, passwrdInp });
+                MessageBox.Show("Bienvenido" + userInp.Text, "Sesión inicada con éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 frmMainU main = new frmMainU();
                 main.ShowDialog();
             }

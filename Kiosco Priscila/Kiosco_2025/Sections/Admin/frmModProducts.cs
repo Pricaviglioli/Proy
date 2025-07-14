@@ -1,5 +1,6 @@
 ﻿using Kiosco_2025.Clases;
 using Kiosco_2025.Utilities;
+using Microsoft.ReportingServices.ReportProcessing.ReportObjectModel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,16 +36,18 @@ namespace Kiosco_2025.Sections.Admin
 
         private void modprodBtn_Click(object sender, EventArgs e)
         {
-
+            bool response = procedure.sequenceSearch(productsTable, descprodInp);
             producto = producto.setProductos(idProdInp.Text, descprodInp.Text, priceInp.Text);
-            if (producto == null)
+            if (producto == null || response)
             {
+                MessageBox.Show("Ya existe un producto con ese nombre", "Producto existente", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 procedure.LimpiarCampos(new List<TextBox> { idProdInp, descprodInp, priceInp });
                 return;
             }
             else
             {
                 procedure.ActualizarDatos("spu_modificar_prod", new List<string> { "@id_prod", "@descripcion", "@precio_unitario" }, new List<object> { producto.id_prod, producto.descripcion, producto.precio_unitario });
+                MessageBox.Show("Producto modificado con éxito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

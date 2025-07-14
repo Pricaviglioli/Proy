@@ -166,7 +166,7 @@
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal - Administrador";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.menuAdmin.ResumeLayout(false);
             this.menuAdmin.PerformLayout();
             this.ResumeLayout(false);

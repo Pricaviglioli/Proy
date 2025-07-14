@@ -24,7 +24,7 @@ namespace Kiosco_2025.Sections.Admin
         private void frmAddProducts_Load(object sender, EventArgs e)
         {
             procedure.MostrarDatos("spu_mostrar_prods", productsTable, new List<string> { "ID", "Producto", "Precio Unitario" });
-            idProdInp.Text = productsTable.Rows.Count.ToString();
+            procedure.getTableLastID(productsTable, idProdInp);
         }
 
         private void productsTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -35,15 +35,18 @@ namespace Kiosco_2025.Sections.Admin
 
         private void addprodBtn_Click(object sender, EventArgs e)
         {
+            bool response = procedure.sequenceSearch(productsTable, descprodInp);
             producto = producto.setProductos(idProdInp.Text, descprodInp.Text, priceInp.Text);
-            if (producto == null)
+            if (producto == null || response)
             {
+                MessageBox.Show("Ya existe un producto con ese nombre", "Producto existente", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 procedure.LimpiarCampos(new List<TextBox> { idProdInp, descprodInp, priceInp });
                 return;
             }
             else
             {
                 procedure.AgregarDatos("spu_agregar_prod", new List<string> { "@id_prod", "@descripcion", "@precio_unitario" }, new List<object> { producto.id_prod, producto.descripcion, producto.precio_unitario });
+                MessageBox.Show("Producto agregado con éxito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

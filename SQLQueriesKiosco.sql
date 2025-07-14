@@ -197,3 +197,17 @@ END
 
 
 EXEC spu_buscar_ventas
+
+EXEC spu_buscar_ventas null, null, 'cerveza iguana', 'efectivo';
+
+
+CREATE PROCEDURE mostrar_prod_eliminables
+AS
+SELECT
+  Productos.id_prod,
+  Productos.descripcion,
+  Productos.precio_unitario
+FROM Productos
+LEFT JOIN DetalleVta
+  ON Productos.id_prod = DetalleVta.id_prod
+WHERE DetalleVta.id_prod IS NULL;

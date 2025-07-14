@@ -24,7 +24,7 @@ namespace Kiosco_2025.Sections.Admin
         private void frmAddUsers_Load(object sender, EventArgs e)
         {
             procedure.MostrarDatos("spu_mostrar_usuarios", usersTable, new List<string> { "ID", "Nombre de usuario", "Contraseña", "Rol" });
-            idUserInp.Text = usersTable.Rows.Count.ToString();
+            procedure.getTableLastID(usersTable, idUserInp);
         }
 
         private void usersTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -36,8 +36,20 @@ namespace Kiosco_2025.Sections.Admin
 
         private void addUserBtn_Click(object sender, EventArgs e)
         {
-            user = user.setUsuario(int.Parse(idUserInp.Text), usernameInp.Text, passwrdInp.Text, roleInp.Text);
-            procedure.AgregarDatos("spu_agregar_user", new List<string> { "@id_usuario", "@username", "@password", "@rol" }, new List<object> { user.id_usuario, user.username, user.password, user.rol});
+            bool response = procedure.sequenceSearch(usersTable, usernameInp);
+            if (response)
+            {
+                MessageBox.Show("Ya existe un usuario con ese nombre de usuario", "Usuario existente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                procedure.LimpiarCampos(new List<TextBox> { idUserInp, usernameInp, passwrdInp });
+                roleInp.SelectedItem = -1;
+                return;
+            }
+            else
+            {
+                user = user.setUsuario(int.Parse(idUserInp.Text), usernameInp.Text, passwrdInp.Text, roleInp.Text);
+                procedure.AgregarDatos("spu_agregar_user", new List<string> { "@id_usuario", "@username", "@password", "@rol" }, new List<object> { user.id_usuario, user.username, user.password, user.rol });
+                MessageBox.Show("Usuario agregado con éxito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

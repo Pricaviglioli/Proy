@@ -23,7 +23,7 @@ namespace Kiosco_2025.Sections.Admin
 
         private void frmDeleteProducts_Load(object sender, EventArgs e)
         {
-            procedure.MostrarDatos("spu_mostrar_prods", productsTable, new List<string> { "ID", "Producto", "Precio Unitario" });
+            procedure.MostrarDatos("mostrar_prod_eliminables", productsTable, new List<string> { "ID", "Producto", "Precio Unitario" });
         }
 
         private void productsTable_CellContentClick(object sender, DataGridViewCellEventArgs e)

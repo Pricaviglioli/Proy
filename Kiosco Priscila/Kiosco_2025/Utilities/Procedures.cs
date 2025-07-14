@@ -1,5 +1,6 @@
 ﻿using Kiosco_2025.Clases;
 using Kiosco_2025.Sections.Admin;
+using Microsoft.ReportingServices.ReportProcessing.ReportObjectModel;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -130,6 +131,13 @@ namespace Kiosco_2025.Utilities
         }
 
 
+        public void getTableLastID(DataGridView table, TextBox txtbox)
+        {
+            int lastID = (table.NewRowIndex) - 1;
+            txtbox.Text = (int.Parse(table.Rows[lastID].Cells[0].Value.ToString()) + 1).ToString();
+        }
+
+
         public decimal Cart(DataGridView CartTable, Productos productos, DataGridViewRow productSelected, char state, int cantidad, decimal subtotal ,decimal precioTotal, Label totalTxt)
         {
             bool exists = false;
@@ -177,6 +185,33 @@ namespace Kiosco_2025.Utilities
         }
 
 
+        public void BuscarDatosV2(string procedureName, DataGridView tableName, List<string> sqlParameters, List<object> parameters, List<String> TitleLists)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand(procedureName, new Conexion().Connect());
+                cmd.CommandType = CommandType.StoredProcedure;
+                for (int i = 0; i < sqlParameters.Count; i++)
+                {
+                    cmd.Parameters.AddWithValue(sqlParameters[i], parameters[i]);
+                }
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                tableName.DataSource = dt;
+                foreach (DataGridViewColumn column in tableName.Columns)
+                {
+                    tableName.Columns[column.Index].HeaderText = TitleLists[column.Index];
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error al buscar los datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+
         public void openMDIContainers(Form formSelected, Form formPadre)
         {
             formSelected.MdiParent = formPadre;
@@ -188,9 +223,22 @@ namespace Kiosco_2025.Utilities
         }
 
 
+        public bool sequenceSearch(DataGridView table, TextBox txtbox)
+        {
+            for (int i = 0; i < (table.RowCount - 1); i++)
+            {
+                if (table.Rows[i].Cells[1].Value.ToString() == txtbox.Text)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
         public string Logincomparision(DataGridView usersTable, (string, string) userInputs, List<(string, string, string)> users)
         {
-            for (int i = 0; i < usersTable.ColumnCount; i++)
+            for (int i = 0; i < (usersTable.RowCount - 1); i++)
             {
                 users.Add((usersTable.Rows[i].Cells[1].Value.ToString(), usersTable.Rows[i].Cells[2].Value.ToString(), usersTable.Rows[i].Cells[3].Value.ToString()));
             }
@@ -212,7 +260,8 @@ namespace Kiosco_2025.Utilities
         }
 
 
-        public void LimpiarCampos(List<TextBox> textBoxes)
+
+public void LimpiarCampos(List<TextBox> textBoxes)
         {
             foreach (TextBox textBox in textBoxes)
             {
