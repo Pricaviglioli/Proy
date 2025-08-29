@@ -134,7 +134,14 @@ namespace Kiosco_2025.Utilities
         public void getTableLastID(DataGridView table, TextBox txtbox)
         {
             int lastID = (table.NewRowIndex) - 1;
-            txtbox.Text = (int.Parse(table.Rows[lastID].Cells[0].Value.ToString()) + 1).ToString();
+            if (lastID == -1)
+            {
+                txtbox.Text = 1.ToString();
+            }
+            else
+            {
+                txtbox.Text = (int.Parse(table.Rows[lastID].Cells[0].Value.ToString()) + 1).ToString();
+            }
         }
 
 

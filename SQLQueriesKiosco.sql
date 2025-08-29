@@ -63,7 +63,7 @@ AS
 DELETE FROM Productos WHERE id_prod = @id_prod
 
 INSERT INTO Usuarios
-VALUES(1, 'Eze', '1234', 'Administrador')
+VALUES(1, 'prisc', 'prisc', 'Administrador')
 
 
 CREATE PROCEDURE spu_mostrar_usuarios
@@ -113,6 +113,8 @@ VALUES(@tipo_pago, @total)
 
 DROP TABLE DetalleVta
 DROP TABLE Venta
+DROP TABLE Usuarios
+DROP TABLE Productos
 DROP PROCEDURE spu_registrar_detallevta
 DROP PROCEDURE spu_registrar_vta
 
